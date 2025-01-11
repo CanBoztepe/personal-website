@@ -1,10 +1,10 @@
 <script setup></script>
 
 <template>
-  <div class="projects-nav">
+  <header class="projects-nav">
     <h1 class="project-select">I'm ProjectsNav (Im a dropdown)</h1>
     <button class="close-button">x</button>
-  </div>
+  </header>
 </template>
 
 <style scoped>
@@ -13,7 +13,7 @@
   justify-content: space-between;
   gap: 0.5rem;
   padding: 0.5rem;
-  width: 100%;
+  /* width: 100%; */
   border: 2px solid grey;
 }
 .project-select {

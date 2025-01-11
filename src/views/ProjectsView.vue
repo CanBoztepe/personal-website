@@ -1,23 +1,81 @@
 <script setup>
 import ProjectsNav from '@/components/ProjectsNav.vue'
-import { RouterView } from 'vue-router'
+import { RouterView, useRouter } from 'vue-router'
+
+// Get the router instance
+const router = useRouter()
+
+function closeOverlay() {
+  router.push({ name: 'home' })
+}
 </script>
 
 <template>
-  <section class="projects-wrapper">
-    <ProjectsNav />
+  <section class="projects-overlay fade-in" @click.self="closeOverlay">
+    <section class="projects-content">
+      <ProjectsNav />
 
-    <!-- Project Demo -->
-    <RouterView name="overlay" />
+      <!-- Project Demo -->
+      <RouterView name="overlay" />
+    </section>
   </section>
 </template>
 
 <style scoped>
-.projects-wrapper {
-  border: 2px solid pink;
-  background-color: rgba(255, 0, 0, 0.2);
-  position: absolute;
+.projects-overlay {
+  position: fixed;
   top: 0;
-  z-index: 999;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+  /* padding: 1rem; */
+  /* transition: opacity 0.4s ease; */
 }
+
+.projects-content {
+  background: var(--color-light-background); /* use CSS variables for dark mode support */
+  color: var(--color-text-dark);
+  /* border-radius: 1rem; */
+  max-width: 1024px;
+  width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s forwards;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1024px) {
+  #app {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #app {
+    padding: 0 1rem;
+  }
+}
+
+/* --color-light-background: #f9fafb;
+  --color-text-dark: #1d1e22;
+  --color-text-dark-muted: #4d4d4d;
+  --color-light-primary: #ff7a59;
+  --color-light-secondary: #00b7c2; */
 </style>

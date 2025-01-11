@@ -45,7 +45,7 @@ defineProps({
   color: var(--color-text-light-muted);
 }
 
-/* only applied if isButton flag is applied in the parent*/
+/* only applied if isButton flag is applied in the parent */
 .link-item-button {
   text-decoration: none;
   padding: 0.7rem 1.5rem;
