@@ -1,0 +1,24 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  font-weight: normal;
+  font-style: normal;
+  display: flex;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  #app {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #app {
+    padding: 0 1rem;
+  }
+}
