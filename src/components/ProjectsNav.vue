@@ -1,25 +1,32 @@
-<script setup></script>
+<script setup>
+import ProjectsCloseButton from '@/components/ProjectsCloseButton.vue'
+</script>
 
 <template>
-  <header class="projects-nav">
-    <h1 class="project-select">I'm ProjectsNav (Im a dropdown)</h1>
-    <button class="close-button">x</button>
+  <header class="projects-header">
+    <nav class="projects-nav">
+      <h1 class="project-select">I'm ProjectsNav (Im a dropdown)</h1>
+
+      <ProjectsCloseButton />
+    </nav>
   </header>
 </template>
 
 <style scoped>
+.projects-header {
+}
+
 .projects-nav {
   display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  /* width: 100%; */
-  border: 2px solid grey;
+  /* justify-content: space-between; */
+  align-items: center;
 }
+
 .project-select {
   border: 2px solid black;
   padding: 0.5rem;
 }
+
 .close-button {
   border: 2px solid black;
   aspect-ratio: 1 / 1;

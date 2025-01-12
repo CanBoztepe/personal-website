@@ -34,16 +34,16 @@ function closeOverlay() {
   align-items: center;
   z-index: 1000;
   overflow-y: auto;
-  /* padding: 1rem; */
+  padding: 1rem;
   /* transition: opacity 0.4s ease; */
 }
 
 .projects-content {
-  background: var(--color-light-background); /* use CSS variables for dark mode support */
+  background: var(--color-light-background);
   color: var(--color-text-dark);
   /* border-radius: 1rem; */
   max-width: 1024px;
-  width: 600px;
+  flex: 1;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -62,20 +62,8 @@ function closeOverlay() {
 
 /* Responsive */
 @media only screen and (max-width: 1024px) {
-  #app {
-    flex-direction: column;
-  }
 }
 
 @media only screen and (max-width: 768px) {
-  #app {
-    padding: 0 1rem;
-  }
 }
-
-/* --color-light-background: #f9fafb;
-  --color-text-dark: #1d1e22;
-  --color-text-dark-muted: #4d4d4d;
-  --color-light-primary: #ff7a59;
-  --color-light-secondary: #00b7c2; */
 </style>
