@@ -13,8 +13,8 @@ import ProjectsCloseButton from '@/components/ProjectsCloseButton.vue'
 </template>
 
 <style scoped>
-.projects-header {
-}
+/* .projects-header {
+} */
 
 .projects-nav {
   display: flex;

@@ -34,7 +34,7 @@ function closeOverlay() {
   align-items: center;
   z-index: 1000;
   overflow-y: auto;
-  padding: 1rem;
+  padding: 0.5rem;
   /* transition: opacity 0.4s ease; */
 }
 
@@ -45,6 +45,7 @@ function closeOverlay() {
   max-width: 1024px;
   flex: 1;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  min-height: 60%;
 }
 
 @keyframes fadeIn {
@@ -62,6 +63,9 @@ function closeOverlay() {
 
 /* Responsive */
 @media only screen and (max-width: 1024px) {
+  .projects-content {
+    width: 90vw;
+  }
 }
 
 @media only screen and (max-width: 768px) {

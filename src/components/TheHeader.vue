@@ -27,8 +27,7 @@ import HeaderAbout from '@/components//HeaderAbout.vue'
 .header {
   flex: 4;
   text-align: left;
-  /* bo
-  rder: 1px solid grey; */
+  /* border: 1px solid grey; */
 }
 .header-wrapper {
   padding: 8rem 0;
@@ -56,6 +55,7 @@ import HeaderAbout from '@/components//HeaderAbout.vue'
     justify-content: flex-start;
     gap: 1rem;
     height: auto;
+    padding: 4rem 0;
   }
 }
 @media only screen and (max-width: 768px) {
