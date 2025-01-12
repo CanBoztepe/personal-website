@@ -1,19 +1,20 @@
 :root {
+  /* Dark mode (default) */
   --color-primary: #ff7a59;
   --color-secondary: #00b7c2;
   --color-background: #1d1e22;
   --color-highlight: #3598db;
   --color-text-light: #f5f5f5;
   --color-text-light-muted: #b8b8b8;
-}
 
-/* THESE ARE FOR THE LIGHT THEME:
-Light  background: #F9FAFB or #FFFFFF;
-primary text dark #1D1E22
-muted text #4D4D4D or #757575
-primary #00B7C2
-secondary #FF7A59
-highligh/hover #3598DB */
+  /* Light mode */
+  --color-light-background: #f9fafb;
+  --color-text-dark: #1d1e22;
+  --color-text-dark-muted: #4d4d4d;
+  /* --color-text-dark-muted: #757575; */
+  --color-light-primary: #ff7a59;
+  --color-light-secondary: #00b7c2;
+}
 
 ::selection {
   background-color: var(--color-primary);
