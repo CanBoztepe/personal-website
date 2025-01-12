@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-=======
 # personal-website
 
->>>>>>> 8c9a194 (first commit)
 my portfolio website, made with Vue3.
 
 Inspired by [brittanychiang.com]
 
 [brittanychiang.com]: https://brittanychiang.com
-<<<<<<< HEAD
-=======
 
 ## Project Setup
 
@@ -28,4 +23,3 @@ npm run dev
 ```sh
 npm run build
 ```
->>>>>>> 8c9a194 (first commit)
