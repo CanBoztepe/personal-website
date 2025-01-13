@@ -120,6 +120,10 @@ defineProps({
     font-size: 0.9rem;
   }
 
+  .date-wrapper {
+    font-size: 0.9rem;
+  }
+
   .text-item {
     font-size: 0.9rem;
   }
@@ -130,7 +134,7 @@ defineProps({
 
   .title-wrapper {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0rem;
   }
 
   .header-divider {

@@ -25,7 +25,7 @@ const experiences = [
     displayStartDate: '2018',
     displayEndDate: '2019',
     description:
-      'Contributed as part of a small dev team at a startup to develop production-ready Vue.js components, working closely with a Senior Fullstack Developer. Created a standalone Vue2 application from the ground up. I got hands-on experience implementing and using essential front-end concepts like state management(Vuex) and navigation(Vue Router). Created responsive UI designs using the Buefy CSS library. Implemented several plug-ins like Vue I18n for Turkish/English language support and Vue Moment for date/time formatting.',
+      'Contributed as part of a small dev team at a startup to develop production-ready Vue.js components, working closely with a Senior Fullstack Developer. Created a standalone Vue2 application from the ground up. I got hands-on experience implementing and using essential front-end concepts like state management(Vuex) and navigation(Vue Router). Created responsive UI designs using the Buefy CSS library. Implemented several plug-ins like Vue I18n for Turkish/English language support and Vue Moment for date formatting.',
   },
 ]
 </script>

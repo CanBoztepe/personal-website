@@ -73,6 +73,10 @@ onMounted(() => {
   })
 })
 
+// --------------------------------------------------
+// Methods
+// --------------------------------------------------
+
 // Handle CLick for all buttons (Main hub)
 function handleButtonClick(label) {
   if (!error.value) {

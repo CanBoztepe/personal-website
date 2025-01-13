@@ -42,10 +42,13 @@ function closeOverlay() {
   background: var(--color-light-background);
   color: var(--color-text-dark);
   /* border-radius: 1rem; */
-  max-width: 1024px;
-  flex: 1;
+  width: 1024px;
+  /* flex: 1; */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  min-height: 60%;
+  /* min-height: 60vh; */
+  max-height: 80vh;
+  /* height: clamp(60vh, 90vh); */
+  overflow: hidden;
 }
 
 @keyframes fadeIn {
@@ -69,5 +72,8 @@ function closeOverlay() {
 }
 
 @media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 500px) {
 }
 </style>

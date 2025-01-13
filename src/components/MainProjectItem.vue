@@ -30,7 +30,8 @@ const imgAlt = computed(() => {
 </script>
 
 <template>
-  <RouterLink class="router-item" :to="demoLink">
+  <a target="_blank" rel="noopener noreferrer" class="router-item">
+    <!-- <RouterLink class="router-item" :to="demoLink"> -->
     <article class="project-item">
       <div class="image-wrapper">
         <img class="project-img" :src="imgSrc" :alt="imgAlt" loading="lazy" />
@@ -49,7 +50,8 @@ const imgAlt = computed(() => {
         ></MainProjectButtons> -->
       </div>
     </article>
-  </RouterLink>
+  </a>
+  <!-- </RouterLink> -->
 </template>
 
 <style scoped>

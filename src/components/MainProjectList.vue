@@ -61,6 +61,7 @@ const projects = [
       :demoLink="project.demoLink"
       :githubLink="project.githubLink"
       :codepenLink="project.codepenLink"
+      :href="project.codepenLink"
     />
   </div>
 </template>
