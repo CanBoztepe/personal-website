@@ -66,7 +66,8 @@ const imgAlt = computed(() => {
   /* border: 1px solid var(--color-primary); */
 }
 
-.router-item:hover {
+.router-item:hover,
+.router-item:focus {
   background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -93,7 +94,10 @@ const imgAlt = computed(() => {
 
 .router-item:hover .project-img,
 .router-item:hover .project-name,
-.router-item:hover .arrow-icon {
+.router-item:hover .arrow-icon,
+.router-item:focus .project-img,
+.router-item:focus .project-name,
+.router-item:focus .arrow-icon {
   border-color: var(--color-primary);
   color: var(--color-primary);
 }

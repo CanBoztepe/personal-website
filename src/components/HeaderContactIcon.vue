@@ -1,7 +1,9 @@
 <script setup></script>
 
 <template>
-  <a class="header-contact-icon" target="_blank" rel="noopener noreferrer"><slot></slot></a>
+  <a class="header-contact-icon" target="_blank" rel="noopener noreferrer" aria-label="Contact link"
+    ><slot></slot
+  ></a>
 </template>
 
 <style scoped>

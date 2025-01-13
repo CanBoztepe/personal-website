@@ -3,7 +3,7 @@ import HeaderContactIcon from './HeaderContactIcon.vue'
 </script>
 
 <template>
-  <div class="contact-links">
+  <div class="contact-links" aria-label="Contact links">
     <HeaderContactIcon href="https://github.com/CanBoztepe">
       <IconMdiGithub />
     </HeaderContactIcon>

@@ -65,6 +65,7 @@ const skills = ['Vue', 'JavaScript', 'HTML', 'CSS']
   display: flex;
   /* justify-content: space-between; */
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 /* Responsive */
