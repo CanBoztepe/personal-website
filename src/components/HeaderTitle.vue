@@ -16,4 +16,11 @@
   /* color: var(--color-secondary); */
   /* font-weight: bold; */
 }
+
+/* Responsive */
+@media only screen and (max-width: 500px) {
+  .header-name {
+    font-size: 2.7rem;
+  }
+}
 </style>

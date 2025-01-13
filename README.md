@@ -1,8 +1,8 @@
 # personal-website
 
-my portfolio website, made with Vue3.
+My portfolio website, made with Vue3.
 
-Inspired by [brittanychiang.com]
+Design inspired by [brittanychiang.com]
 
 [brittanychiang.com]: https://brittanychiang.com
 

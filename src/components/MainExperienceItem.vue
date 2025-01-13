@@ -98,6 +98,47 @@ defineProps({
 
 .job-description {
   margin-top: 0.8rem;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
+}
+
+/* Responsive */
+@media only screen and (max-width: 1024px) {
+  .date-wrapper {
+    flex: 0.8;
+  }
+}
+
+/* @media only screen and (max-width: 768px) {
+} */
+
+@media only screen and (max-width: 500px) {
+  .experience-item {
+    gap: 0rem;
+  }
+
+  .job-title {
+    font-size: 0.9rem;
+  }
+
+  .text-item {
+    font-size: 0.9rem;
+  }
+
+  .title-upper-wrapper {
+    flex-direction: column;
+  }
+
+  .title-wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  /* .date-wrapper {
+    flex: 0.5;
+  } */
 }
 </style>

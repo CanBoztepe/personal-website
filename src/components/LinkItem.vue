@@ -14,6 +14,10 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  isResponsive: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 
@@ -22,7 +26,12 @@ defineProps({
     target="_blank"
     rel="noopener noreferrer"
     class="link-item"
-    :class="{ 'link-item-button': isButton, 'link-item-bold': isBold, 'link-item-grey': isGrey }"
+    :class="{
+      'link-item-button': isButton,
+      'link-item-bold': isBold,
+      'link-item-grey': isGrey,
+      'link-item-responsive': isResponsive,
+    }"
   >
     <slot></slot> <IconMdiArrowTopRight class="arrow-icon" />
   </a>
@@ -68,5 +77,21 @@ defineProps({
 .link-item:hover .arrow-icon,
 .link-item:focus .arrow-icon {
   transform: translate(0px, 0px);
+}
+
+/* Responsive */
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .link-item-responsive {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .link-item-responsive {
+    font-size: 0.8rem;
+  }
 }
 </style>

@@ -19,22 +19,33 @@ defineProps({
 </script>
 
 <template>
-  <div class="cert-item">
-    <p class="cert-p">
-      {{ schoolName }} <span>-</span><LinkItem :href="link">{{ name }}</LinkItem>
-    </p>
-  </div>
+  <!-- <div class="cert-item"> -->
+  <p class="cert-p">
+    {{ schoolName }} <span>-</span><LinkItem :href="link" isResponsive>{{ name }}</LinkItem>
+  </p>
+  <!-- </div> -->
 </template>
 
 <style scoped>
-.cert-item {
+/* .cert-item {
   display: flex;
   gap: 1rem;
-}
+} */
 
 .cert-p {
   /* color: var(--color-text-light); */
   display: flex;
   gap: 1rem;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1024px) {
+}
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 500px) {
+  .cert-p {
+    gap: 0.5rem;
+  }
 }
 </style>

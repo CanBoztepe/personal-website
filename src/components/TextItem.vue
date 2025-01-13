@@ -11,4 +11,17 @@
   padding: 0.4rem 0.6rem;
   font-size: 1rem;
 }
+
+/* Responsive */
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 500px) {
+  .text-item {
+    font-size: 0.9rem;
+  }
+}
 </style>

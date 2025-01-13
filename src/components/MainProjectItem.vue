@@ -1,6 +1,5 @@
 <script setup>
 import { defineProps, computed } from 'vue'
-import MainProjectButtons from './MainProjectButtons.vue'
 
 const props = defineProps({
   name: {
@@ -31,40 +30,108 @@ const imgAlt = computed(() => {
 </script>
 
 <template>
-  <article class="project-item">
-    <img class="project-img" :src="imgSrc" :alt="imgAlt" loading="lazy" />
-    <div class="project-main">
-      <h3 class="project-name">{{ name }}</h3>
+  <RouterLink class="router-item" :to="demoLink">
+    <article class="project-item">
+      <div class="image-wrapper">
+        <img class="project-img" :src="imgSrc" :alt="imgAlt" loading="lazy" />
+      </div>
 
-      <MainProjectButtons
-        :demoLink="demoLink"
-        :githubLink="githubLink"
-        :codepenLink="codepenLink"
-      ></MainProjectButtons>
-    </div>
-  </article>
+      <div class="project-main">
+        <!-- <LinkItem>{{ name }}</LinkItem> -->
+
+        <h3 class="project-name">{{ name }}</h3>
+
+        <IconMdiArrowTopRight class="arrow-icon" />
+        <!-- <MainProjectButtons
+          :demoLink="demoLink"
+          :githubLink="githubLink"
+          :codepenLink="codepenLink"
+        ></MainProjectButtons> -->
+      </div>
+    </article>
+  </RouterLink>
 </template>
 
 <style scoped>
+.router-item {
+  text-decoration: none;
+  color: var(--color-text-light-muted);
+  cursor: pointer;
+  max-width: 500px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  /* border: 1px solid var(--color-primary); */
+}
+
+.router-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .project-item {
   display: flex;
-  gap: 1.5rem;
-  height: 120px;
+  gap: 1rem;
+}
+
+.image-wrapper {
+  /* border-radius: 0.5rem; */
+  aspect-ratio: 2 / 1;
+  flex: 1;
 }
 
 .project-img {
-  max-height: 70%;
-  width: auto;
+  width: 100%;
+  height: auto;
+  display: block;
   border: 2px solid var(--color-text-light-muted);
   border-radius: 0.5rem;
-  margin-bottom: -12px;
+  transition: border-color 0.3s ease;
+}
+
+.router-item:hover .project-img,
+.router-item:hover .project-name,
+.router-item:hover .arrow-icon {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .project-main {
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  /* gap: 1rem; */
+  flex: 2;
+}
+
+.project-name {
+  transition: color 0.3s ease;
+}
+
+.arrow-icon {
+  margin-left: 0.2rem;
+  transform: translate(-4px, 4px);
+  transition: transform 0.3s ease;
+}
+
+.router-item:hover .arrow-icon,
+.router-item:focus .arrow-icon {
+  transform: translate(0px, 0px);
+}
+
+/* Responsive */
+@media only screen and (max-width: 1024px) {
+}
+@media only screen and (max-width: 768px) {
+}
+@media only screen and (max-width: 500px) {
+  .router-item {
+    max-width: 95vw;
+  }
+
+  .project-item {
+    gap: 0.8rem;
+  }
 }
 </style>

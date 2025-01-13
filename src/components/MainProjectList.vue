@@ -69,6 +69,6 @@ const projects = [
 .projects-list {
   display: flex;
   flex-direction: column-reverse;
-  gap: 3rem;
+  gap: 1rem;
 }
 </style>

@@ -9,5 +9,6 @@
   /* max-width: 550px; */
   margin-bottom: 0.3rem;
   color: var(--color-text-light-muted);
+  font-size: 1rem;
 }
 </style>

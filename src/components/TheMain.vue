@@ -29,7 +29,7 @@ const skills = ['Vue', 'JavaScript', 'HTML', 'CSS']
         ><MainExperienceList />
 
         <div>
-          <LinkItem href="/resume.pdf" isBold>View Résumé</LinkItem>
+          <LinkItem href="/resume.pdf" isBold isResponsive="">View Résumé</LinkItem>
         </div>
       </template>
     </MainSection>
@@ -67,11 +67,20 @@ const skills = ['Vue', 'JavaScript', 'HTML', 'CSS']
   gap: 1rem;
 }
 
+/* Responsive */
 @media only screen and (max-width: 1024px) {
   .main {
     padding-top: 0;
   }
 }
 @media only screen and (max-width: 768px) {
+  .main {
+    gap: 6rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main {
+    gap: 5rem;
+  }
 }
 </style>
