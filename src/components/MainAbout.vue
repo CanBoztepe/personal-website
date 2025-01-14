@@ -18,10 +18,10 @@
       >Vue</a
     >
     and always eager to learn new frameworks and tools. <br /><br />
-    Outside of coding, I enjoy going for walks, hitting the gym, and creating content for my gaming
-    channel—activities that help me stay balanced, curious, and solution-oriented. I look forward to
-    contributing my adaptability, teamwork, and passion for continuous growth to a forward-thinking
-    development team.
+    Outside of coding, I enjoy going for walks, hitting the gym, and make gaming videos—activities
+    that help me stay balanced, curious, and solution-oriented. I look forward to contributing my
+    adaptability, teamwork, and passion for continuous growth to a forward-thinking development
+    team.
   </p>
 </template>
 
