@@ -1,7 +1,7 @@
 <script setup>
 import MainSkillsItem from './MainSkillsItem.vue'
 
-const skills = ['Vue', 'JavaScript', 'HTML', 'CSS']
+const skills = ['Vue3', 'JavaScript', 'HTML', 'CSS', 'Git']
 </script>
 
 <template>
