@@ -2,12 +2,10 @@
 import MainSection from '@/components/MainSection.vue'
 import MainAbout from '@/components/MainAbout.vue'
 import LinkItem from '@/components/LinkItem.vue'
-import TextItem from '@/components/TextItem.vue'
+import MainSkillsList from '@/components/MainSkillsList.vue'
 import MainExperienceList from '@/components/MainExperienceList.vue'
 import MainCertificationsList from '@/components/MainCertificationsList.vue'
 import MainProjectList from '@/components/MainProjectList.vue'
-
-const skills = ['Vue', 'JavaScript', 'HTML', 'CSS']
 </script>
 
 <template>
@@ -17,9 +15,7 @@ const skills = ['Vue', 'JavaScript', 'HTML', 'CSS']
       <template #default>
         <MainAbout />
 
-        <div class="text-item-wrapper">
-          <TextItem v-for="(skill, index) in skills" :key="index">{{ skill }}</TextItem>
-        </div>
+        <MainSkillsList />
       </template>
     </MainSection>
 
@@ -52,20 +48,12 @@ const skills = ['Vue', 'JavaScript', 'HTML', 'CSS']
 
 <style scoped>
 .main {
-  /* border: 1px solid grey; */
   text-align: left;
   padding: 8rem 0;
   flex: 5;
   display: flex;
   flex-direction: column;
   gap: 8rem;
-}
-
-.text-item-wrapper {
-  display: flex;
-  /* justify-content: space-between; */
-  gap: 1rem;
-  flex-wrap: wrap;
 }
 
 /* Responsive */
