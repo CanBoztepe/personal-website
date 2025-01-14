@@ -8,8 +8,7 @@ Design inspired by [brittanychiang.com]
 
 [brittanychiang.com]: https://brittanychiang.com
 [Vue3]: https://vuejs.org/
-
-[canboztepe.netlify.app]: [https://canboztepe.netlify.app/]
+[canboztepe.netlify.app]: https://canboztepe.netlify.app/
 
 ## Tools & Plugins
 
