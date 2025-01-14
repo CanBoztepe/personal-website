@@ -9,12 +9,15 @@
     worked closely with a senior full-stack developer to build production-ready Vue components,
     further sharpening my problem-solving and communication skills. After COVID, I leveraged my
     language abilities as a freelance translator while pursuing my Canadian visa, and I’m now based
-    in Canada seeking new challenges as a Junior Front-End Developer.
+    in Canada seeking new challenges as a Front-End Developer.
     <br /><br />
     Driven by best practices, responsiveness, and accessibility, I thrive in fast-paced startup
     settings where I can combine creativity and technical expertise to solve problems. I’m
-    proficient with Vue and always eager to learn new frameworks and tools.
-    <br /><br />
+    proficient with
+    <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" class="about-link"
+      >Vue</a
+    >
+    and always eager to learn new frameworks and tools. <br /><br />
     Outside of coding, I enjoy going for walks, hitting the gym, and creating content for my gaming
     channel—activities that help me stay balanced, curious, and solution-oriented. I look forward to
     contributing my adaptability, teamwork, and passion for continuous growth to a forward-thinking
@@ -32,5 +35,11 @@
   font-weight: normal;
   /* color: var(--color-secondary); */
   /* font-weight: bold; */
+}
+
+.about-link {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: bold;
 }
 </style>
