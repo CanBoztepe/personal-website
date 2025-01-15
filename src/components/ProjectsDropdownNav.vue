@@ -86,22 +86,31 @@ function navigate() {
 
 <template>
   <div class="project-select-wrapper">
-    <label for="project-select"></label>
+    <label for="project-select" aria-label="projects select menu"></label>
     <select
       id="project-select"
       class="project-select"
       v-model="selectedRoute"
       @change="handleChange"
+      role="menu"
     >
-      <option class="project-option" value="/projects/javascript-calculator">
+      <option role="menuitem" class="project-option" value="/projects/javascript-calculator">
         JavaScript Calculator
       </option>
-      <option class="project-option" value="/projects/drum-machine">Drum Machine</option>
-      <option class="project-option" value="/projects/markdown-previewer">
+
+      <option role="menuitem" class="project-option" value="/projects/drum-machine">
+        Drum Machine
+      </option>
+
+      <option role="menuitem" class="project-option" value="/projects/markdown-previewer">
         Markdown Previewer
       </option>
-      <option class="project-option" value="/projects/pomodoro-timer">Pomodoro Timer</option>
-      <option class="project-option" value="/projects/random-quote-machine">
+
+      <option role="menuitem" class="project-option" value="/projects/pomodoro-timer">
+        Pomodoro Timer
+      </option>
+
+      <option role="menuitem" class="project-option" value="/projects/random-quote-machine">
         Random Quote Machine
       </option>
     </select>
