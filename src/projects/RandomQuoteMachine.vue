@@ -1,9 +1,9 @@
 <template>
   <div class="random-quote-app">
     <!-- Navbar -->
-    <nav class="navbar">
+    <!-- <nav class="navbar">
       <h1 class="navbar-title geist-mono-title">RANDOM QUOTE MACHINE</h1>
-    </nav>
+    </nav> -->
 
     <main id="quote-box">
       <!-- Quote Text -->
@@ -25,6 +25,7 @@
 
       <!-- Buttons -->
       <div id="buttons-div">
+        <!-- Twitter Icon -->
         <a
           id="tweet-quote"
           :href="tweetLink"
@@ -32,7 +33,8 @@
           rel="noopener noreferrer"
           title="Share this quote on X!"
         >
-          <i class="fa-brands fa-x-twitter fa-2x"></i>
+          <!-- <i class="fa-brands fa-x-twitter fa-2x"></i> -->
+          <IconMditwitter class="twitter-icon"></IconMditwitter>
         </a>
 
         <!-- New Quote Button -->
@@ -70,7 +72,9 @@ async function getRandomQuote() {
   isLoading.value = true
   try {
     const response = await axios.get(
-      'https://cors-anywhere.herokuapp.com/https://zenquotes.io/api/random',
+      // 'https://cors-anywhere.herokuapp.com/https://zenquotes.io/api/random',
+      // 'https://zenquotes.io/api/random',
+      '/api/api/random',
     )
     const quoteData = response.data[0]
     // Update refs with new quote
@@ -95,9 +99,9 @@ onMounted(() => {
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@700&display=swap');
 
-html {
+/* html {
   height: 100%;
-  font-family: 'Rubik', sans-serif;
+
 }
 body {
   height: 100%;
@@ -106,9 +110,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(255, 164, 124);
-  background: linear-gradient(85deg, rgba(255, 164, 124, 1) 0%, rgba(255, 202, 144, 1) 42%);
-}
+
+} */
 
 * {
   margin: 0;
@@ -118,9 +121,14 @@ body {
 }
 
 .random-quote-app {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Rubik', sans-serif;
+  background: rgb(255, 164, 124);
+  background: linear-gradient(85deg, rgba(255, 164, 124, 1) 0%, rgba(255, 202, 144, 1) 42%);
 }
 
 /* navbar */
@@ -183,6 +191,7 @@ body {
 #buttons-div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0;
 }
 
@@ -197,6 +206,7 @@ body {
   height: 34px;
   padding: 0 2rem;
   border: 2px solid #1d1e22;
+  /* border: none; */
   border-radius: 5px;
   font-family: 'Rubik', sans-serif;
   font-size: 1rem;
@@ -204,6 +214,7 @@ body {
   align-items: center;
   justify-content: center;
   align-self: end;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
 }
 
 #new-quote:hover {
@@ -215,8 +226,8 @@ a {
   color: #1d1e22;
 }
 
-.fa-x-twitter {
-  font-size: 2.3em;
+.twitter-icon {
+  font-size: 2em;
 }
 
 /* loading spinner */
@@ -279,12 +290,12 @@ a {
     font-size: 1.1em;
   }
   #quote-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
   }
   #buttons-div {
     flex-direction: column-reverse;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
   #new-quote {

@@ -121,14 +121,14 @@ function navigate() {
 .project-select-wrapper {
   position: relative;
   display: inline-block;
-  width: 250px;
+  width: 260px;
   height: 48px;
   padding: 1px;
 }
 
 .project-select-wrapper:hover {
   border-right: 2px solid var(--color-text-dark);
-  width: 251px;
+  width: 262px;
   /* to fix arrow moving */
 }
 

@@ -3,6 +3,7 @@ import ProjectsCloseButton from '@/components/ProjectsCloseButton.vue'
 import ProjectsDropdownNav from '@/components/ProjectsDropdownNav.vue'
 import { defineEmits } from 'vue'
 
+// switch to pinia
 const emit = defineEmits(['projectLinks'])
 
 // Emit project links to ProjectsView.vue
