@@ -32,16 +32,16 @@ import MainCertProjectList from '@/components/MainCertProjectList.vue'
     </MainSection>
 
     <MainSection>
-      <template #title>Certifications</template>
+      <template #title>Projects</template>
       <template #default>
-        <MainCertificationsList />
+        <MainCoolProjectList />
       </template>
     </MainSection>
 
     <MainSection>
-      <template #title>Projects</template>
+      <template #title>Certifications</template>
       <template #default>
-        <MainCoolProjectList />
+        <MainCertificationsList />
       </template>
     </MainSection>
 

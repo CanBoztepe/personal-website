@@ -5,9 +5,9 @@ import MainCetificationItem from '@/components/MainCetificationItem.vue'
 const certifications = [
   {
     id: 1,
-    name: 'Responsive Web Design',
+    name: 'Front End Development Libraries',
     schoolName: 'freeCodeCamp',
-    link: 'https://www.freecodecamp.org/certification/CanBoztepe/responsive-web-design',
+    link: 'https://www.freecodecamp.org/certification/CanBoztepe/front-end-development-libraries',
   },
   {
     id: 2,
@@ -17,9 +17,9 @@ const certifications = [
   },
   {
     id: 3,
-    name: 'Front End Development Libraries',
+    name: 'Responsive Web Design',
     schoolName: 'freeCodeCamp',
-    link: 'https://www.freecodecamp.org/certification/CanBoztepe/front-end-development-libraries',
+    link: 'https://www.freecodecamp.org/certification/CanBoztepe/responsive-web-design',
   },
 ]
 </script>
@@ -39,7 +39,7 @@ const certifications = [
 <style scoped>
 .experience-list {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 1rem;
 }
 </style>

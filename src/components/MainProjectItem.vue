@@ -110,6 +110,7 @@ const imgAlt = computed(() => {
 
 .project-name {
   transition: color 0.3s ease;
+  line-height: 1;
 }
 
 .arrow-icon {

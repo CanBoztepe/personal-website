@@ -10,19 +10,19 @@ import RandomQuoteMachine from '@/assets/images/random-quote-machine-image.png'
 const projects = [
   {
     id: 1,
-    name: 'Random Quote Machine',
-    imgSrc: RandomQuoteMachine,
-    demoLink: '/projects/random-quote-machine',
+    name: 'JavaScript Calculator',
+    imgSrc: JavaScriptCalculatorImage,
+    demoLink: '/projects/javascript-calculator',
     githubLink: '',
-    codepenLink: 'https://codepen.io/CanBoztepe/pen/vYoMBme',
+    codepenLink: 'https://codepen.io/CanBoztepe/pen/KwPMGBx',
   },
   {
     id: 2,
-    name: 'Pomodoro Timer',
-    imgSrc: PomodoroTimerImage,
-    demoLink: '/projects/pomodoro-timer',
+    name: 'Drum Machine',
+    imgSrc: DrumMachineImage,
+    demoLink: '/projects/drum-machine',
     githubLink: '',
-    codepenLink: 'https://codepen.io/CanBoztepe/pen/mybRYvd',
+    codepenLink: 'https://codepen.io/CanBoztepe/pen/jENEQvZ',
   },
   {
     id: 3,
@@ -34,19 +34,19 @@ const projects = [
   },
   {
     id: 4,
-    name: 'Drum Machine',
-    imgSrc: DrumMachineImage,
-    demoLink: '/projects/drum-machine',
+    name: 'Pomodoro Timer',
+    imgSrc: PomodoroTimerImage,
+    demoLink: '/projects/pomodoro-timer',
     githubLink: '',
-    codepenLink: 'https://codepen.io/CanBoztepe/pen/jENEQvZ',
+    codepenLink: 'https://codepen.io/CanBoztepe/pen/mybRYvd',
   },
   {
     id: 5,
-    name: 'JavaScript Calculator',
-    imgSrc: JavaScriptCalculatorImage,
-    demoLink: '/projects/javascript-calculator',
+    name: 'Random Quote Machine',
+    imgSrc: RandomQuoteMachine,
+    demoLink: '/projects/random-quote-machine',
     githubLink: '',
-    codepenLink: 'https://codepen.io/CanBoztepe/pen/KwPMGBx',
+    codepenLink: 'https://codepen.io/CanBoztepe/pen/vYoMBme',
   },
 ]
 </script>
@@ -69,7 +69,7 @@ const projects = [
 <style scoped>
 .projects-list {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 1rem;
 }
 </style>

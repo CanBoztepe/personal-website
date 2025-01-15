@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <RouterLink to="/" class="router-close-link">
-    <button class="close-button"><IconMdiClose /></button
+    <button class="close-button" tabindex="-1"><IconMdiClose /></button
   ></RouterLink>
 </template>
 
@@ -26,14 +26,8 @@ import { RouterLink } from 'vue-router'
   align-items: center;
 }
 
-.close-button:hover,
-.close-button:focus {
+.router-close-link:hover .close-button,
+.router-close-link:focus .close-button {
   background-color: #dcdcdc;
 }
-
-/* --color-light-background: #f9fafb;
-  --color-text-dark: #1d1e22;
-  --color-text-dark-muted: #4d4d4d;
-  --color-light-primary: #ff7a59;
-  --color-light-secondary: #00b7c2; */
 </style>

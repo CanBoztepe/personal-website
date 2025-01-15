@@ -73,6 +73,7 @@ defineProps({
 
 .title-upper-wrapper {
   display: flex;
+  /* flex-direction: column; */
   justify-content: space-between;
 }
 
@@ -105,6 +106,9 @@ defineProps({
 @media only screen and (max-width: 1024px) {
   .date-wrapper {
     flex: 0.8;
+  }
+  .title-upper-wrapper {
+    flex-direction: column;
   }
 }
 

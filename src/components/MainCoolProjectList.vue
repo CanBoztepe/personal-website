@@ -33,7 +33,7 @@ const coolProjects = [
 <style scoped>
 .projects-list {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 1rem;
 }
 </style>
