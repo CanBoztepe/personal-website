@@ -288,8 +288,8 @@ h2 {
   width: 200px;
 }
 
-.control-header {
-}
+/* .control-header {
+} */
 
 .control-buttons-div {
   display: flex;
