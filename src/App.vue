@@ -4,7 +4,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <!-- <TheDevNav /> -->
+  <TheDevNav />
   <RouterView />
   <RouterView name="overlay" />
 </template>
