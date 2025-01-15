@@ -366,6 +366,7 @@ function handleKeyPress(event) {
 
 .drum-machine-app {
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -379,10 +380,11 @@ function handleKeyPress(event) {
 /* Drum machine and sections */
 .drum-machine {
   background-color: #404145;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 5px;
   width: 400px;
   padding: 12px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /*.controls-section {
@@ -569,10 +571,10 @@ input[type='range']:hover {
 
 /* Responsive */
 @media only screen and (max-width: 768px) {
-  html,
+  /* html,
   body {
     background: #404145;
-  }
+  } */
   .drum-machine {
     background-color: #404145;
     border: none;
