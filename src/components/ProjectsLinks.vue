@@ -17,13 +17,9 @@ defineProps({
   <div class="project-links-wrapper">
     <p>
       View code in
-      <a :href="githubLink" target="_blank" rel="noopener noreferrer" class=""
-        >Github (Composition API)</a
-      >
+      <a :href="githubLink" target="_blank" rel="noopener noreferrer">Github (Composition API)</a>
       or
-      <a :href="codepenLink" target="_blank" rel="noopener noreferrer" class=""
-        >CodePen (Options API)</a
-      >
+      <a :href="codepenLink" target="_blank" rel="noopener noreferrer">CodePen (Options API)</a>
     </p>
   </div>
 </template>
