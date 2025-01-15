@@ -12,15 +12,12 @@ const props = defineProps({
   },
   demoLink: {
     type: String,
-    required: true,
   },
   githubLink: {
     type: String,
-    required: true,
   },
   codepenLink: {
     type: String,
-    required: true,
   },
 })
 

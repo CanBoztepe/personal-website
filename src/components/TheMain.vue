@@ -4,8 +4,9 @@ import MainAbout from '@/components/MainAbout.vue'
 import LinkItem from '@/components/LinkItem.vue'
 import MainSkillsList from '@/components/MainSkillsList.vue'
 import MainExperienceList from '@/components/MainExperienceList.vue'
+import MainCoolProjectList from '@/components/MainCoolProjectList.vue'
 import MainCertificationsList from '@/components/MainCertificationsList.vue'
-import MainProjectList from '@/components/MainProjectList.vue'
+import MainCertProjectList from '@/components/MainCertProjectList.vue'
 </script>
 
 <template>
@@ -38,9 +39,16 @@ import MainProjectList from '@/components/MainProjectList.vue'
     </MainSection>
 
     <MainSection>
+      <template #title>Projects</template>
+      <template #default>
+        <MainCoolProjectList />
+      </template>
+    </MainSection>
+
+    <MainSection>
       <template #title>Certification Projects</template>
       <template #default>
-        <MainProjectList />
+        <MainCertProjectList />
       </template>
     </MainSection>
   </main>
