@@ -70,7 +70,7 @@ function emitLinks() {
       // console.log(`emitted: ${certProjectLinks.pomodoroTimer}`)
       break
     case '/projects/random-quote-machine':
-      // emit('projectLinks', certProjectLinks.RandomQuoteMachine)
+      emit('projectLinks', certProjectLinks.RandomQuoteMachine)
       break
     default:
       console.log(`Sorry, no bueno`)
