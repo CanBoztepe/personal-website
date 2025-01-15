@@ -16,6 +16,7 @@ Design inspired by [brittanychiang.com]
 - [Vue-Router]
 - [unplugin vue components]
 - [unplugin icons]
+- [Mathjs]
 - [Axios]
 - [Marked]
 
@@ -25,6 +26,7 @@ Design inspired by [brittanychiang.com]
 [unplugin vue components]: https://github.com/unplugin/unplugin-vue-components
 [Axios]: https://axios-http.com/docs/intro
 [Marked]: https://marked.js.org/
+[Mathjs]: https://mathjs.org/
 
 ## Project Setup
 
