@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <RouterLink to="/" class="router-close-link">
-    <button class="close-button" tabindex="-1"><IconMdiClose /></button
+    <button class="close-button" tabindex="-1" aria-label="Close Overlay"><IconMdiClose /></button
   ></RouterLink>
 </template>
 
