@@ -324,7 +324,8 @@ function resultCleaner() {
 } */
 
 .javascript-calculator-app {
-  min-height: 60vh;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,14 +420,14 @@ function resultCleaner() {
     width: 100%;
     height: 100%;
     /* flex: 1; */
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end; */
+    justify-content: flex-end;
   }
 
-  /* .buttons-section {
-    height: 70%;
-  } */
+  .buttons-section {
+    height: 80%;
+  }
 
   .formula-text {
     font-size: 9vw;
