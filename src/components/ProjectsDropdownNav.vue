@@ -39,8 +39,15 @@ function navigate() {
   display: inline-block;
   width: 250px;
   height: 48px;
+  padding: 1px;
   /* border-right: 1px solid grey; */
   /* border-radius: 0.6rem; */
+}
+
+.project-select-wrapper:hover {
+  border-right: 1px solid var(--color-text-dark);
+  width: 251px;
+  /* to fix arrow moving */
 }
 
 .project-select-wrapper label {
@@ -60,8 +67,8 @@ function navigate() {
   height: 100%;
   padding: 0.5rem 2.5rem 0.5rem 1rem; /* Extra right padding to reserve space for the arrow */
   font-size: 1rem;
-  line-height: 1.5;
-  font-family: 'Poppins', Inter;
+  /* line-height: 1.5; */
+  font-family: 'Poppins', Inter, sans-serif !important;
   color: var(--color-text-dark);
   background-color: #fff;
   /* border: 1px solid #ccc; */
@@ -73,16 +80,24 @@ function navigate() {
     box-shadow 0.2s;
 }
 
-.project-select:hover {
-  background-color: #dcdcdc;
+/* .project-select:hover {
+  background-color: var(--color-light-highlight) !important;
 }
 
 .project-option {
   font-family: 'Poppins', Inter, sans-serif !important;
 }
 
+.project-option:hover,
+.project-option:focus {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-secondary) !important;
+  cursor: pointer !important;
+} */
+
 /* Add a custom, static arrow */
 .project-select-wrapper::after {
+  /* color: var(--color-text-dark); */
   content: '';
   position: absolute;
   top: 50%;

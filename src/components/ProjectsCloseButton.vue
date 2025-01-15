@@ -28,6 +28,6 @@ import { RouterLink } from 'vue-router'
 
 .router-close-link:hover .close-button,
 .router-close-link:focus .close-button {
-  background-color: #dcdcdc;
+  background-color: var(--color-light-highlight);
 }
 </style>

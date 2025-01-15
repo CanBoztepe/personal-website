@@ -14,6 +14,7 @@
   /* --color-text-dark-muted: #757575; */
   --color-light-primary: #ff7a59;
   --color-light-secondary: #00b7c2;
+  --color-light-highlight: #dcdcdc;
 }
 
 ::selection {
