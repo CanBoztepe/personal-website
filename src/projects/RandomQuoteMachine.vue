@@ -182,8 +182,8 @@ body {
 }
 
 #author-text {
-  font-family: 'Merriweather', sans-serif;
-  font-size: 1rem;
+  /* font-family: 'Merriweather', sans-serif; */
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
