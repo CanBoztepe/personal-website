@@ -27,9 +27,9 @@ function handleProjectsNavEmit(obj) {
       <ProjectsNav @projectLinks="handleProjectsNavEmit" />
 
       <!-- Project Demo -->
-      <section class="project-demo">
+      <main class="project-demo">
         <RouterView name="overlay" />
-      </section>
+      </main>
 
       <footer>
         <ProjectButtons
