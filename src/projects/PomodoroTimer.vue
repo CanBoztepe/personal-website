@@ -17,7 +17,8 @@
             @click="setBreak('inc')"
             :disabled="isRunning"
           >
-            <i class="fa-solid fa-plus fa-2x control-icon"></i>
+            <!-- <i class="fa-solid fa-plus fa-2x control-icon"></i> -->
+            <IconMdiPlus class="control-icon"></IconMdiPlus>
           </button>
           <p id="break-length" class="control-text">{{ breakLength }}</p>
           <button
@@ -26,7 +27,8 @@
             @click="setBreak('dec')"
             :disabled="isRunning"
           >
-            <i class="fa-solid fa-minus fa-2x control-icon"></i>
+            <!-- <i class="fa-solid fa-minus fa-2x control-icon"></i> -->
+            <IconMdiMinus class="control-icon"></IconMdiMinus>
           </button>
         </div>
       </div>
@@ -41,7 +43,8 @@
             @click="setSession('inc')"
             :disabled="isRunning"
           >
-            <i class="fa-solid fa-plus fa-2x control-icon"></i>
+            <IconMdiPlus class="control-icon"></IconMdiPlus>
+            <!-- <i class="fa-solid fa-plus fa-2x control-icon"></i> -->
           </button>
           <p id="session-length" class="control-text">{{ sessionLength }}</p>
           <button
@@ -50,31 +53,35 @@
             @click="setSession('dec')"
             :disabled="isRunning"
           >
-            <i class="fa-solid fa-minus fa-2x control-icon"></i>
+            <!-- <i class="fa-solid fa-minus fa-2x control-icon"></i> -->
+            <IconMdiMinus class="control-icon"></IconMdiMinus>
           </button>
         </div>
       </div>
     </section>
 
-    <!-- Tooltip for button disabled -->
-    <div id="tooltip" class="tooltip" v-show="tooltipVisible">
-      Buttons are disabled when the clock is running :)
-    </div>
-
     <!-- Timer section -->
     <section class="timer-section">
+      <!-- Tooltip for button disabled -->
+      <div id="tooltip" class="tooltip" v-show="tooltipVisible">
+        Buttons are disabled when the clock is running :)
+      </div>
+
       <h2 id="timer-label" class="timer-header">{{ breakOrSession }}</h2>
       <p id="time-left" class="timer-display">{{ formattedTime }}</p>
       <div class="timer-buttons-div">
         <!-- Play/Pause button -->
         <button id="start_stop" class="timer-button" @click="playPause">
-          <i class="fa-solid fa-pause fa-3x timer-button-icon" v-show="isRunning"></i>
-          <i class="fa-solid fa-play fa-3x timer-button-icon" v-show="!isRunning"></i>
+          <IconMdiPause class="timer-button-icon" v-show="isRunning"></IconMdiPause>
+          <IconMdiPlay class="timer-button-icon" v-show="!isRunning"></IconMdiPlay>
+          <!-- <i class="fa-solid fa-pause fa-3x timer-button-icon" v-show="isRunning"></i>
+          <i class="fa-solid fa-play fa-3x timer-button-icon" v-show="!isRunning"></i> -->
         </button>
 
         <!-- Reset button -->
         <button id="reset" class="timer-button" @click="resetTimer">
-          <i class="fa-solid fa-refresh fa-3x timer-button-icon"></i>
+          <IconMdiRefresh class="timer-button-icon"></IconMdiRefresh>
+          <!-- <i class="fa-solid fa-refresh fa-3x timer-button-icon"></i> -->
         </button>
       </div>
     </section>
@@ -211,24 +218,20 @@ onBeforeUnmount(() => {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&family=Martian+Mono:wght@500&display=swap');
 
-html {
+/* html {
   height: 100%;
   color: #ffffff;
   font-family: 'Lexend', serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-}
-
-body {
   height: 100%;
   background-color: #1f1f1f;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px;
-}
-
+} */
 * {
   margin: 0;
   padding: 0;
@@ -255,6 +258,17 @@ h2 {
 /* Main Container */
 .main-container {
   height: 100%;
+  color: #ffffff;
+  font-family: 'Lexend', serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
 }
 .main-header {
   font-size: 3em;
@@ -298,6 +312,8 @@ h2 {
 }
 
 .control-icon {
+  color: orange;
+  font-size: 2rem;
 }
 
 .control-text {
@@ -313,6 +329,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .timer-header {
@@ -338,13 +355,15 @@ h2 {
 }
 
 .timer-button-icon {
-  width: 36px;
+  /* width: 36px; */
+  color: orange;
+  font-size: 3rem;
 }
 
 /* Tooltop for buttons disabled */
 .tooltip {
   position: absolute;
-  transform: translateY(-4px);
+  top: -2rem;
   border: 1px solid white;
   border-radius: 5px;
   text-align: center;
@@ -354,6 +373,8 @@ h2 {
 }
 
 /* Responsive */
+@media only screen and (max-width: 1024px) {
+}
 @media only screen and (max-width: 500px) {
   .controls-section {
     flex-direction: column-reverse;
@@ -364,6 +385,12 @@ h2 {
   .tooltip {
     width: 300px;
     font-size: 0.7rem;
+    /* transform: translateY(4.5rem); */
+  }
+}
+@media only screen and (max-width: 360px) {
+  .main-header {
+    border: none;
   }
 }
 </style>
