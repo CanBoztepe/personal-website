@@ -4,8 +4,8 @@ import { useRouter } from 'vue-router'
 
 // Access the router instance
 const router = useRouter()
-// console.log(router.currentRoute.value.path)
 
+// console.log(router.currentRoute.value.path)
 const selectedRoute = ref(router.currentRoute.value.path)
 
 // Navigate function
@@ -18,11 +18,17 @@ function navigate() {
   <div class="project-select-wrapper">
     <label for="project-select"></label>
     <select id="project-select" class="project-select" v-model="selectedRoute" @change="navigate">
-      <option value="/projects/javascript-calculator">JavaScript Calculator</option>
-      <option value="/projects/drum-machine">Drum Machine</option>
-      <option value="/projects/markdown-previewer">Markdown Previewer</option>
-      <option value="/projects/pomodoro-timer">Pomodoro Timer</option>
-      <option value="/projects/random-quote-machine">Random Quote Machine</option>
+      <option class="project-option" value="/projects/javascript-calculator">
+        JavaScript Calculator
+      </option>
+      <option class="project-option" value="/projects/drum-machine">Drum Machine</option>
+      <option class="project-option" value="/projects/markdown-previewer">
+        Markdown Previewer
+      </option>
+      <option class="project-option" value="/projects/pomodoro-timer">Pomodoro Timer</option>
+      <option class="project-option" value="/projects/random-quote-machine">
+        Random Quote Machine
+      </option>
     </select>
   </div>
 </template>
@@ -33,6 +39,8 @@ function navigate() {
   display: inline-block;
   width: 250px;
   height: 48px;
+  /* border-right: 1px solid grey; */
+  /* border-radius: 0.6rem; */
 }
 
 .project-select-wrapper label {
@@ -65,9 +73,12 @@ function navigate() {
     box-shadow 0.2s;
 }
 
-.project-select:hover,
-.project-select:focus {
+.project-select:hover {
   background-color: #dcdcdc;
+}
+
+.project-option {
+  font-family: 'Poppins', Inter, sans-serif !important;
 }
 
 /* Add a custom, static arrow */
