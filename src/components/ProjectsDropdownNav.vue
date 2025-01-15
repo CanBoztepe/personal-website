@@ -1,12 +1,83 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, defineEmits, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+
+const emit = defineEmits(['projectLinks'])
+
+// switch to pinia later
+const certProjectLinks = {
+  JavascriptCalculator: {
+    githubLink:
+      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/JavascriptCalculator.vue',
+    codepenLink: 'https://codepen.io/CanBoztepe/pen/KwPMGBx',
+  },
+  drumMachine: {
+    githubLink:
+      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/DrumMachine.vue',
+    codepenLink: 'https://codepen.io/CanBoztepe/pen/jENEQvZ',
+  },
+  markdownPreviewer: {
+    githubLink:
+      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/MarkdownPreviewer.vue',
+    codepenLink: 'https://codepen.io/CanBoztepe/pen/YzmoVQq',
+  },
+  pomodoroTimer: {
+    githubLink:
+      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/PomodoroTimer.vue',
+    codepenLink: 'https://codepen.io/CanBoztepe/pen/mybRYvd',
+  },
+  RandomQuoteMachine: {
+    githubLink:
+      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/RandomQuoteMachine.vue',
+    codepenLink: 'https://codepen.io/CanBoztepe/pen/vYoMBme',
+  },
+}
 
 // Access the router instance
 const router = useRouter()
 
 // console.log(router.currentRoute.value.path)
 const selectedRoute = ref(router.currentRoute.value.path)
+
+onMounted(() => {
+  emitLinks()
+})
+
+// HandleDropdownInput
+function handleChange() {
+  emitLinks()
+
+  navigate()
+}
+
+// Emit project links to ProjectsNav.vue
+function emitLinks() {
+  switch (selectedRoute.value) {
+    case '/projects/javascript-calculator':
+      emit('projectLinks', certProjectLinks.JavascriptCalculator)
+      console.log(`emitted: ${certProjectLinks.JavascriptCalculator}`)
+      break
+    case '/projects/drum-machine':
+      emit('projectLinks', certProjectLinks.drumMachine)
+      console.log(`emitted: ${certProjectLinks.drumMachine}`)
+      break
+    case '/projects/markdown-previewer':
+      emit('projectLinks', certProjectLinks.markdownPreviewer)
+      console.log(`emitted: ${certProjectLinks.markdownPreviewer}`)
+      break
+    case '/projects/pomodoro-timer':
+      emit('projectLinks', certProjectLinks.pomodoroTimer)
+      console.log(`emitted: ${certProjectLinks.pomodoroTimer}`)
+      break
+    case '/projects/random-quote-machine':
+      emit('projectLinks', certProjectLinks.RandomQuoteMachine)
+      console.log(`emitted: ${certProjectLinks.RandomQuoteMachine}`)
+      break
+    default:
+      console.log(`Sorry, no bueno`)
+      break
+  }
+}
 
 // Navigate function
 function navigate() {
@@ -17,7 +88,12 @@ function navigate() {
 <template>
   <div class="project-select-wrapper">
     <label for="project-select"></label>
-    <select id="project-select" class="project-select" v-model="selectedRoute" @change="navigate">
+    <select
+      id="project-select"
+      class="project-select"
+      v-model="selectedRoute"
+      @change="handleChange"
+    >
       <option class="project-option" value="/projects/javascript-calculator">
         JavaScript Calculator
       </option>

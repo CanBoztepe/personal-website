@@ -1,12 +1,21 @@
 <script setup>
 import ProjectsCloseButton from '@/components/ProjectsCloseButton.vue'
 import ProjectsDropdownNav from '@/components/ProjectsDropdownNav.vue'
+import { defineEmits } from 'vue'
+
+const emit = defineEmits(['projectLinks'])
+
+// Emit project links to ProjectsView.vue
+function handleChildEmit(projectLinks) {
+  emit('projectLinks', projectLinks)
+  console.log(`ProjectsNav emitted: ${projectLinks}`)
+}
 </script>
 
 <template>
   <header class="projects-header">
     <nav class="projects-nav">
-      <ProjectsDropdownNav />
+      <ProjectsDropdownNav @projectLinks="handleChildEmit" />
 
       <ProjectsCloseButton />
     </nav>

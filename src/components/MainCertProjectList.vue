@@ -6,14 +6,15 @@ import MarkdownPreviewerImage from '@/assets/images/markdown-previewer-image.png
 import PomodoroTimerImage from '@/assets/images/pomodoro-timer-image.png'
 import RandomQuoteMachine from '@/assets/images/random-quote-machine-image.png'
 
-// Certification Projects
+// Certification Projects, switch to pinia later
 const projects = [
   {
     id: 1,
     name: 'JavaScript Calculator',
     imgSrc: JavaScriptCalculatorImage,
     demoLink: '/projects/javascript-calculator',
-    githubLink: '',
+    githubLink:
+      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/JavascriptCalculator.vue',
     codepenLink: 'https://codepen.io/CanBoztepe/pen/KwPMGBx',
   },
   {
@@ -21,7 +22,8 @@ const projects = [
     name: 'Drum Machine',
     imgSrc: DrumMachineImage,
     demoLink: '/projects/drum-machine',
-    githubLink: '',
+    githubLink:
+      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/DrumMachine.vue',
     codepenLink: 'https://codepen.io/CanBoztepe/pen/jENEQvZ',
   },
   {
@@ -29,7 +31,8 @@ const projects = [
     name: 'Markdown Previewer',
     imgSrc: MarkdownPreviewerImage,
     demoLink: '/projects/markdown-previewer',
-    githubLink: '',
+    githubLink:
+      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/MarkdownPreviewer.vue',
     codepenLink: 'https://codepen.io/CanBoztepe/pen/YzmoVQq',
   },
   {
@@ -37,7 +40,8 @@ const projects = [
     name: 'Pomodoro Timer',
     imgSrc: PomodoroTimerImage,
     demoLink: '/projects/pomodoro-timer',
-    githubLink: '',
+    githubLink:
+      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/PomodoroTimer.vue',
     codepenLink: 'https://codepen.io/CanBoztepe/pen/mybRYvd',
   },
   {
@@ -45,7 +49,8 @@ const projects = [
     name: 'Random Quote Machine',
     imgSrc: RandomQuoteMachine,
     demoLink: '/projects/random-quote-machine',
-    githubLink: '',
+    githubLink:
+      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/RandomQuoteMachine.vue',
     codepenLink: 'https://codepen.io/CanBoztepe/pen/vYoMBme',
   },
 ]
