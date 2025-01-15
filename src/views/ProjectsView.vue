@@ -5,6 +5,7 @@ import { RouterView, useRouter } from 'vue-router'
 import { ref } from 'vue'
 
 // switch to pinia, the dropdown should mutate state
+// or maybe ProjectButtons.vue can handle its own links from state
 const buttonLinks = ref({})
 
 // Get the router instance
@@ -53,7 +54,7 @@ function handleProjectsNavEmit(obj) {
   align-items: center;
   z-index: 1000;
   overflow-y: auto;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   /* transition: opacity 0.4s ease; */
 }
 
@@ -62,15 +63,17 @@ function handleProjectsNavEmit(obj) {
   color: var(--color-text-dark);
   /* border-radius: 1rem; */
   width: 1024px;
+  /* height: 60vh; */
   /* flex: 1; */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   /* min-height: 60vh; */
-  max-height: 80vh;
+
   /* height: clamp(60vh, 90vh); */
   overflow: hidden;
 }
 
 .project-demo {
+  height: 60vh;
 }
 
 @keyframes fadeIn {
@@ -94,6 +97,13 @@ function handleProjectsNavEmit(obj) {
 }
 
 @media only screen and (max-width: 768px) {
+  .projects-content {
+    width: 95vw;
+  }
+
+  .project-demo {
+    height: 70vh;
+  }
 }
 
 @media only screen and (max-width: 500px) {

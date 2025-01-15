@@ -8,7 +8,6 @@ const emit = defineEmits(['projectLinks'])
 // Emit project links to ProjectsView.vue
 function handleChildEmit(projectLinks) {
   emit('projectLinks', projectLinks)
-  console.log(`ProjectsNav emitted: ${projectLinks}`)
 }
 </script>
 

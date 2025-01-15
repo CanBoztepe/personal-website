@@ -55,23 +55,22 @@ function emitLinks() {
   switch (selectedRoute.value) {
     case '/projects/javascript-calculator':
       emit('projectLinks', certProjectLinks.JavascriptCalculator)
-      console.log(`emitted: ${certProjectLinks.JavascriptCalculator}`)
+      // console.log(`emitted: ${certProjectLinks.JavascriptCalculator}`)
       break
     case '/projects/drum-machine':
       emit('projectLinks', certProjectLinks.drumMachine)
-      console.log(`emitted: ${certProjectLinks.drumMachine}`)
+      // console.log(`emitted: ${certProjectLinks.drumMachine}`)
       break
     case '/projects/markdown-previewer':
       emit('projectLinks', certProjectLinks.markdownPreviewer)
-      console.log(`emitted: ${certProjectLinks.markdownPreviewer}`)
+      // console.log(`emitted: ${certProjectLinks.markdownPreviewer}`)
       break
     case '/projects/pomodoro-timer':
       emit('projectLinks', certProjectLinks.pomodoroTimer)
-      console.log(`emitted: ${certProjectLinks.pomodoroTimer}`)
+      // console.log(`emitted: ${certProjectLinks.pomodoroTimer}`)
       break
     case '/projects/random-quote-machine':
-      emit('projectLinks', certProjectLinks.RandomQuoteMachine)
-      console.log(`emitted: ${certProjectLinks.RandomQuoteMachine}`)
+      // emit('projectLinks', certProjectLinks.RandomQuoteMachine)
       break
     default:
       console.log(`Sorry, no bueno`)
