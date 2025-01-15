@@ -134,6 +134,8 @@ function equalsInput() {
     .replace(/--/g, '- -')
 
   try {
+    // Please sir, dont inject bad code 🙏🙏🙏
+    // need to implement iframe
     const evalResult = eval(correctedFormula)
     const formattedResult = numberFormatter.format(evalResult)
 
