@@ -35,6 +35,7 @@
  */
 
 import { ref, onMounted } from 'vue'
+import { evaluate } from 'mathjs'
 
 const formulaDisplay = ref('')
 const mainDisplay = ref('0')
@@ -132,11 +133,13 @@ function equalsInput() {
     .replace(/÷/g, '/')
     .replace(/·/g, '*')
     .replace(/--/g, '- -')
+    .replace(/,/g, '')
 
   try {
-    // Please sir, dont inject bad code 🙏🙏🙏 THANK YOU!!!
-    // need to implement iframe?
-    const evalResult = eval(correctedFormula)
+    //  evaluate() might NOT work 100% intended
+    // need to implement iframe with eval()?
+    // evaluate() from math.js
+    const evalResult = evaluate(correctedFormula)
     const formattedResult = numberFormatter.format(evalResult)
 
     // Digit limit for displaying result
