@@ -3,10 +3,6 @@ import { defineProps } from 'vue'
 import LinkItem from './LinkItem.vue'
 
 defineProps({
-  demoLink: {
-    type: String,
-    required: true,
-  },
   githubLink: {
     type: String,
     required: true,
@@ -19,13 +15,18 @@ defineProps({
 </script>
 
 <template>
-  <p>
+  <p class="buttons-p">
     View Source Code on
-    <LinkItem :href="githubLink">Github (Composition API)</LinkItem> or
-    <LinkItem :href="codepenLink">Codepen (Options API)</LinkItem>
+    <LinkItem :href="githubLink" isResponsive isProjectLink isBold
+      >Github (Composition API)</LinkItem
+    >
+    or
+    <LinkItem :href="codepenLink" isResponsive isProjectLink isBold>Codepen (Options API)</LinkItem>
   </p>
 </template>
 
 <style scoped>
-/* color: var(--color-text-light); */
+.buttons-p {
+  padding: 0.5rem;
+}
 </style>

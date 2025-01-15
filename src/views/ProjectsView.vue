@@ -1,5 +1,6 @@
 <script setup>
 import ProjectsNav from '@/components/ProjectsNav.vue'
+import ProjectButtons from '@/components/ProjectButtons.vue'
 import { RouterView, useRouter } from 'vue-router'
 
 // Get the router instance
@@ -8,6 +9,8 @@ const router = useRouter()
 function closeOverlay() {
   router.push({ name: 'home' })
 }
+
+// function
 </script>
 
 <template>
@@ -16,7 +19,13 @@ function closeOverlay() {
       <ProjectsNav />
 
       <!-- Project Demo -->
-      <RouterView name="overlay" />
+      <section class="project-demo">
+        <RouterView name="overlay" />
+      </section>
+
+      <footer>
+        <ProjectButtons></ProjectButtons>
+      </footer>
     </section>
   </section>
 </template>
@@ -49,6 +58,9 @@ function closeOverlay() {
   max-height: 80vh;
   /* height: clamp(60vh, 90vh); */
   overflow: hidden;
+}
+
+.project-demo {
 }
 
 @keyframes fadeIn {

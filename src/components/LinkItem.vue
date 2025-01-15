@@ -18,6 +18,10 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  isProjectLink: {
+    type: Boolean,
+    default: false,
+  },
 })
 </script>
 
@@ -31,9 +35,16 @@ defineProps({
       'link-item-bold': isBold,
       'link-item-grey': isGrey,
       'link-item-responsive': isResponsive,
+      'link-item-project': isProjectLink,
     }"
   >
-    <slot></slot> <IconMdiArrowTopRight class="arrow-icon" />
+    <slot></slot>
+    <IconMdiArrowTopRight
+      class="arrow-icon"
+      :class="{
+        'arrow-icon-project': isProjectLink,
+      }"
+    />
   </a>
 </template>
 
@@ -77,6 +88,15 @@ defineProps({
 .link-item:hover .arrow-icon,
 .link-item:focus .arrow-icon {
   transform: translate(0px, 0px);
+}
+
+.link-item-project {
+  color: blue;
+  text-decoration: underline;
+}
+
+.arrow-icon-project {
+  display: none;
 }
 
 /* Responsive */

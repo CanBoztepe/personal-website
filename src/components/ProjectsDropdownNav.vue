@@ -40,12 +40,10 @@ function navigate() {
   width: 250px;
   height: 48px;
   padding: 1px;
-  /* border-right: 1px solid grey; */
-  /* border-radius: 0.6rem; */
 }
 
 .project-select-wrapper:hover {
-  border-right: 1px solid var(--color-text-dark);
+  border-right: 2px solid var(--color-text-dark);
   width: 251px;
   /* to fix arrow moving */
 }
