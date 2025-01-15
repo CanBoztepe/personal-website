@@ -31,6 +31,7 @@ defineProps({
       'link-item-bold': isBold,
       'link-item-grey': isGrey,
       'link-item-responsive': isResponsive,
+      'link-item-project': isProjectLink,
     }"
   >
     <slot></slot> <IconMdiArrowTopRight class="arrow-icon" />

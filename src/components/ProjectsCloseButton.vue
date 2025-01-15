@@ -3,12 +3,16 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-  <RouterLink to="/" style="margin-left: auto">
+  <RouterLink to="/" class="router-close-link">
     <button class="close-button"><IconMdiClose /></button
   ></RouterLink>
 </template>
 
 <style scoped>
+.router-close-link {
+  margin-left: auto;
+}
+
 .close-button {
   border: none;
   cursor: pointer;
