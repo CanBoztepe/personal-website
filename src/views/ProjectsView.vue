@@ -6,7 +6,10 @@ import { ref } from 'vue'
 
 // switch to pinia, the dropdown should mutate state
 // or maybe ProjectButtons.vue can handle its own links from state
-const buttonLinks = ref({})
+const buttonLinks = ref({
+  githubLink: '',
+  codepenLink: '',
+})
 
 // Get the router instance
 const router = useRouter()
@@ -16,7 +19,7 @@ function closeOverlay() {
 }
 
 function handleProjectsNavEmit(obj) {
-  console.log(obj)
+  // console.log(obj)
   buttonLinks.value = obj
 }
 </script>
