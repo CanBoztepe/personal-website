@@ -1,5 +1,5 @@
 <script setup>
-import MainProjectItem from '@/components/MainProjectItem.vue'
+import MainCoolProjectItem from '@/components/MainCoolProjectItem.vue'
 import PersonalWebsite from '@/assets/images/personal-website.png'
 
 // Certification Projects
@@ -17,7 +17,7 @@ const coolProjects = [
 
 <template>
   <div class="projects-list">
-    <MainProjectItem
+    <MainCoolProjectItem
       v-for="project in coolProjects"
       :key="project.id"
       :name="project.name"
