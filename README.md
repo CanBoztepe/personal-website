@@ -2,7 +2,7 @@
 
 My portfolio website, made with [Vue3].
 
-Temporary domain: [canboztepe.netlify.app]
+live demo: [canboztepe.netlify.app]
 
 Design inspired by [brittanychiang.com]
 
@@ -31,6 +31,11 @@ Design inspired by [brittanychiang.com]
 [DOMPurify]: https://github.com/cure53/DOMPurify
 
 ## Project Setup
+
+Make sure you have [Node.js] and [npm] installed.
+
+[Node.js]: https://nodejs.org/
+[npm]: https://www.npmjs.com/
 
 ```sh
 npm install
