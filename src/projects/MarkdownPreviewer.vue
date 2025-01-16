@@ -4,9 +4,7 @@
     <nav class="navbar">
       <div class="navbar-title">MARKDOWN PREVIEWER</div>
       <div class="navbar-button" @click="showPreview">
-        <IconMdiEyeCircleOutline
-          :class="previewActive ? 'preview-icon-active' : 'preview-icon'"
-        ></IconMdiEyeCircleOutline>
+        <IconMdiEye :class="previewActive ? 'preview-icon-active' : 'preview-icon'"></IconMdiEye>
         <!-- <i
           class="fa-solid fa-eye"
           :class="previewActive ? 'preview-icon-active' : 'preview-icon'"
