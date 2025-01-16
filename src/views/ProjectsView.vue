@@ -34,7 +34,7 @@ function handleProjectsNavEmit(obj) {
         <RouterView name="overlay" />
       </main>
 
-      <footer>
+      <footer class="projects-footer">
         <ProjectButtons
           :githubLink="buttonLinks.githubLink"
           :codepenLink="buttonLinks.codepenLink"
@@ -45,6 +45,10 @@ function handleProjectsNavEmit(obj) {
 </template>
 
 <style scoped>
+.projects-footer {
+  border-top: 1px solid var(--color-text-dark);
+}
+
 .projects-overlay {
   position: fixed;
   top: 0;
@@ -72,11 +76,12 @@ function handleProjectsNavEmit(obj) {
   /* min-height: 60vh; */
 
   /* height: clamp(60vh, 90vh); */
-  overflow: hidden;
 }
 
 .project-demo {
   height: 60vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 @keyframes fadeIn {

@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <nav class="devnav">
-    <p>DEVNAV</p>
+    <p>DEVNAV | sorry i didnt make seperate branch for build :/</p>
     <div class="nav-links">
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/projects">Projects</RouterLink>

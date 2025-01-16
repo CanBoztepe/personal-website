@@ -1,12 +1,12 @@
 <template>
-  <div id="markdown-previewer-app">
+  <div class="markdown-previewer-app">
     <!-- Navbar -->
     <nav class="navbar">
       <div class="navbar-title">MARKDOWN PREVIEWER</div>
       <div class="navbar-button" @click="showPreview">
-        <IconMdiVolumeOff
+        <IconMdiEyeCircleOutline
           :class="previewActive ? 'preview-icon-active' : 'preview-icon'"
-        ></IconMdiVolumeOff>
+        ></IconMdiEyeCircleOutline>
         <!-- <i
           class="fa-solid fa-eye"
           :class="previewActive ? 'preview-icon-active' : 'preview-icon'"
@@ -122,78 +122,85 @@ const previewText = computed(() => {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* html,
-body,
 .markdown-previewer-app {
   height: 100%;
-} */
-
-.markdown-previewer-app {
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   font-family: 'Rubik', sans-serif;
+  overflow: hidden;
 }
 
-/* navbar */
+/* Navbar */
 .navbar {
   width: 100%;
   background-color: #373d49;
   height: 48px;
-  min-height: 48px;
+  /* min-height: 48px; */
   display: flex;
   justify-content: space-between;
-  align-content: center;
-  z-index: 2;
+  align-items: center;
 }
 
 .navbar-title {
   margin-left: 5px;
-  height: 100%;
-  display: flex;
-  align-items: center;
   font-size: 1.5em;
   color: #f7f7f7;
 }
 
-/* navbar buttons */
 .navbar-button {
-  display: none;
+  display: none; /* Shown in media query below for mobile */
 }
 
-/* main parent wrapper */
+/* Main content: fill all remaining space below the navbar */
 .main-wrapper {
-  background-color: #f4f4f4;
-  /* flex: 1; */
+  flex: 1;
   display: flex;
-  align-items: stretch;
-  max-height: 100vh;
   overflow: hidden;
+  background-color: #f4f4f4;
+  position: relative;
 }
 
-/* child wrappers */
+/* Editor area */
 .editor-wrapper {
-  width: 50%;
+  flex: 1;
+  /* width: 50%; */
   display: flex;
   flex-direction: column;
-  max-height: 100%;
-  height: 100%;
 }
 
+/* The <textarea> */
+.editor {
+  flex: 1;
+  width: 100%;
+  resize: none;
+  padding: 4px;
+  border: none;
+  outline: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Preview area for desktop */
 .preview-wrapper {
   flex: 1;
-  max-width: 50%;
   border-left: 1px solid #d3d3d3;
-  max-height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.preview-wrapper-phone {
-  display: none;
+/* The preview container */
+.preview {
+  flex: 1;
+  width: 100%;
+  padding: 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: white;
 }
 
-/* headers */
+/* Header in both editor/preview areas */
 .header {
   border-bottom: 1px solid #d3d3d3;
   min-height: 28px;
@@ -202,28 +209,67 @@ body,
   align-items: center;
   padding-left: 8px;
   color: grey;
+  flex: 0 0 auto; /* fixed height row */
 }
 
-/* markdown (textarea) */
-.editor {
-  resize: none;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  padding: 4px;
-  border: none;
-  /* flex: 1; */
-  overflow: auto;
-  /* max-height: 100%; */
+/* Preview for phone (hidden on desktop by default) */
+.preview-wrapper-phone {
+  display: none;
 }
 
-/* preview */
-.preview {
-  background-color: white;
-  width: 100%;
-  padding: 8px;
-  overflow: auto;
-  max-height: 100%;
+/* Responsive: show phone preview, hide PC preview */
+@media only screen and (max-width: 768px) {
+  .navbar-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8px;
+    cursor: pointer;
+  }
+
+  .preview-icon {
+    color: #f7f7f7;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    padding: 8px;
+  }
+
+  .preview-icon-active {
+    color: #03fc4d;
+    background-color: #1a1d25;
+    border-radius: 5px;
+    font-size: 2.5rem;
+    padding: 8px;
+  }
+
+  .preview-wrapper-pc {
+    display: none;
+  }
+
+  .preview-wrapper-phone {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+    max-width: 100%;
+    background-color: #f4f4f4;
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    top: 0;
+    right: -100vw;
+    transition: right 0.25s ease-in-out;
+  }
+
+  .preview-wrapper-phone.active {
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .navbar-title {
+    font-size: 5vw;
+  }
 }
 
 /* Preview Styling */
@@ -316,66 +362,5 @@ body,
 .preview th {
   background-color: #f4f4f4;
   font-weight: bold;
-}
-
-/* Responsive */
-@media only screen and (max-width: 768px) {
-  .navbar-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 8px;
-  }
-
-  .navbar-button:hover {
-    cursor: pointer;
-  }
-
-  .preview-icon {
-    color: #f7f7f7;
-    border-radius: 5px;
-    font-size: 26px;
-    margin-right: 8px;
-    padding: 8px;
-  }
-
-  .preview-icon-active {
-    color: #03fc4d;
-    background-color: #1a1d25;
-    border-radius: 5px;
-    font-size: 26px;
-    margin-right: 8px;
-    padding: 8px;
-  }
-
-  .preview-wrapper-pc {
-    display: none;
-  }
-
-  .preview-wrapper-phone {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    box-sizing: border-box;
-    max-width: 100%;
-    background-color: #f4f4f4;
-    position: fixed;
-    z-index: 3;
-    width: 100vw;
-    height: calc(100% - 48px);
-    top: 48px;
-    right: -100vw;
-    transition: right 0.25s ease-in-out;
-  }
-
-  .preview-wrapper-phone.active {
-    right: 0;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .navbar-title {
-    font-size: 5vw;
-  }
 }
 </style>
