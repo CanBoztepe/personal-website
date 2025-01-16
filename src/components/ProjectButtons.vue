@@ -20,7 +20,7 @@ defineProps({
     <LinkItem :href="githubLink" isResponsive isProjectLink isBold
       >Github (Composition API)</LinkItem
     >
-    or
+    or on
     <LinkItem :href="codepenLink" isResponsive isProjectLink isBold>Codepen (Options API)</LinkItem>
   </p>
 </template>
