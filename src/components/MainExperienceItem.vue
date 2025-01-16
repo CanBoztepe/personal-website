@@ -115,10 +115,10 @@ defineProps({
   margin-top: 0.8rem;
 }
 
-.job-description {
-  /* margin-top: 0.8rem; */
-  /* font-size: 0.9rem; */
-}
+/* .job-description { */
+/* margin-top: 0.8rem; */
+/* font-size: 0.9rem; */
+/* } */
 
 .job-description-item {
   margin-bottom: 0.3rem;
