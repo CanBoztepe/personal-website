@@ -9,7 +9,7 @@
     worked closely with a senior full-stack developer to build production-ready Vue components,
     further sharpening my problem-solving and communication skills. After COVID, I leveraged my
     language abilities as a freelance translator while pursuing my Canadian visa, and I’m now based
-    in Canada seeking new challenges as a Front-End Developer.
+    in Canada seeking new challenges as a developer.
     <br /><br />
     Driven by best practices, responsiveness, and accessibility, I thrive in fast-paced startup
     settings where I can combine creativity and technical expertise to solve problems. I’m
@@ -17,11 +17,11 @@
     <a href="https://vuejs.org/" target="_blank" rel="noopener noreferrer" class="about-link"
       >Vue</a
     >
-    and always eager to learn new frameworks and tools. <br /><br />
-    Outside of coding, I enjoy going for walks, hitting the gym, and make gaming videos—activities
+    and always eager to learn new frameworks, tools, and languages. <br /><br />
+    Outside of coding, I enjoy going for walks, hitting the gym, and making gaming videos—activities
     that help me stay balanced, curious, and solution-oriented. I look forward to contributing my
-    adaptability, teamwork, and passion for continuous growth to a forward-thinking development
-    team.
+    adaptability, teamwork, and passion for continuous growth to a forward-thinking development team
+    and grow as a programmer.
   </p>
 </template>
 
