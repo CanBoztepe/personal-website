@@ -30,8 +30,8 @@ defineProps({
     type: String,
     required: true,
   },
-  description: {
-    type: String,
+  descriptions: {
+    type: Array,
     required: true,
   },
 })
@@ -58,9 +58,23 @@ defineProps({
         <p>{{ location }}</p>
       </div>
 
-      <p class="job-description">
-        {{ description }}
-      </p>
+      <div v-if="descriptions.length <= 1" class="job-description-wrapper">
+        <p class="job-description">
+          {{ descriptions[0] }}
+        </p>
+      </div>
+
+      <div v-else class="job-description-wrapper">
+        <ul>
+          <li
+            class="job-description-item"
+            v-for="(description, index) in descriptions"
+            :key="index"
+          >
+            {{ description }}
+          </li>
+        </ul>
+      </div>
     </section>
   </article>
 </template>
@@ -97,9 +111,17 @@ defineProps({
   color: var(--color-text-light);
 }
 
-.job-description {
+.job-description-wrapper {
   margin-top: 0.8rem;
+}
+
+.job-description {
+  /* margin-top: 0.8rem; */
   /* font-size: 0.9rem; */
+}
+
+.job-description-item {
+  margin-bottom: 0.3rem;
 }
 
 /* Responsive */
