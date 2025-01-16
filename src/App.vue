@@ -1,10 +1,10 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import TheDevNav from '@/components/TheDevNav.vue'
+// import TheDevNav from '@/components/TheDevNav.vue'
 </script>
 
 <template>
-  <TheDevNav />
+  <!-- <TheDevNav /> -->
   <RouterView />
   <RouterView name="overlay" />
 </template>
