@@ -19,6 +19,7 @@ Design inspired by [brittanychiang.com]
 - [Mathjs]
 - [Axios]
 - [Marked]
+- [DOMPurify]
 
 [Vite]: https://vite.dev/
 [Vue-Router]: https://router.vuejs.org/
@@ -27,6 +28,7 @@ Design inspired by [brittanychiang.com]
 [Axios]: https://axios-http.com/docs/intro
 [Marked]: https://marked.js.org/
 [Mathjs]: https://mathjs.org/
+[DOMPurify]: https://github.com/cure53/DOMPurify
 
 ## Project Setup
 

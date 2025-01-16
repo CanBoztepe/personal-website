@@ -49,6 +49,7 @@
 
 import { ref, computed, onMounted } from 'vue'
 import { marked } from 'marked'
+import DOMPurify from 'dompurify'
 
 // If you want to sanitize the output, you can import DOMPurify:
 // import DOMPurify from 'dompurify'
@@ -108,7 +109,8 @@ function showPreview() {
 const previewText = computed(() => {
   // If you want to sanitize, do something like:
   // return DOMPurify.sanitize(marked.parse(markdownText.value))
-  return marked.parse(markdownText.value)
+  // return marked.parse(markdownText.value)
+  return DOMPurify.sanitize(marked.parse(markdownText.value))
 })
 </script>
 
