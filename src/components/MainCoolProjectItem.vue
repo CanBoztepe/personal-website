@@ -58,6 +58,7 @@ const imgAlt = computed(() => {
   cursor: pointer;
   max-width: 500px;
   padding: 1rem;
+  padding-left: 0;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
   /* border: 1px solid var(--color-primary); */
