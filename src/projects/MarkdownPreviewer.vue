@@ -167,6 +167,7 @@ const previewText = computed(() => {
 .editor-wrapper {
   flex: 1;
   /* width: 50%; */
+  min-width: 50%;
   display: flex;
   flex-direction: column;
 }
@@ -174,7 +175,7 @@ const previewText = computed(() => {
 /* The <textarea> */
 .editor {
   flex: 1;
-  width: 100%;
+  /* min-width: 50%; */
   resize: none;
   padding: 4px;
   border: none;
@@ -190,16 +191,18 @@ const previewText = computed(() => {
   border-left: 1px solid #d3d3d3;
   display: flex;
   flex-direction: column;
+  min-width: 0; /* Allow the item to shrink */
 }
 
 /* The preview container */
 .preview {
   flex: 1;
-  width: 100%;
+  /* width: 100%; */
   padding: 8px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-y: auto !important;
+  overflow-x: auto;
   background-color: white;
+  /* min-width: 0;  */
 }
 
 /* Header in both editor/preview areas */
@@ -252,6 +255,7 @@ const previewText = computed(() => {
     display: flex;
     flex-direction: column;
     /* overflow: hidden; */
+    overflow: auto;
     box-sizing: border-box;
     max-width: 100%;
     background-color: #f4f4f4;
@@ -351,7 +355,7 @@ const previewText = computed(() => {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
 }
 
 ::v-deep .preview table {
@@ -370,5 +374,19 @@ const previewText = computed(() => {
 ::v-deep .preview th {
   background-color: #f4f4f4;
   font-weight: bold;
+}
+
+::v-deep .preview pre {
+  white-space: pre; /* Ensure long lines are not wrapped */
+  overflow-x: auto; /* Should already be set but keep it to be sure */
+}
+
+::v-deep .preview code {
+  white-space: pre;
+}
+
+::v-deep .preview table,
+::v-deep .preview img {
+  max-width: none;
 }
 </style>
