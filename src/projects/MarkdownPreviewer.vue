@@ -249,7 +249,7 @@ const previewText = computed(() => {
   .preview-wrapper-phone {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
     box-sizing: border-box;
     max-width: 100%;
     background-color: #f4f4f4;
@@ -258,6 +258,7 @@ const previewText = computed(() => {
     /* height: 100%; */
     top: 0;
     right: -100vw;
+    bottom: 0;
     transition: right 0.25s ease-in-out;
   }
 
@@ -272,7 +273,7 @@ const previewText = computed(() => {
   }
 }
 
-/* Preview Styling */
+/* Preview styling */
 .preview > * {
   margin-bottom: 1em;
 }
@@ -313,7 +314,7 @@ const previewText = computed(() => {
 }
 
 .preview pre {
-  background-color: #2d2d2d;
+  background-color: #2d2d2d !important;
   color: #ccc;
   padding: 1rem;
   overflow: auto;
@@ -339,9 +340,8 @@ const previewText = computed(() => {
 }
 
 .preview img {
-  /* max-width: 100%; */
-  width: 100%;
-  /* height: auto; */
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: 1.5rem 0;
 }
