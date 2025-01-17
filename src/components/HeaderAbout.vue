@@ -1,6 +1,6 @@
 <template>
   <p class="header-text">
-    I'm a self-thought developer who strives to write readable, maintainable and scalable code.
+    I'm a self-taught developer who strives to write readable, maintainable and scalable code.
   </p>
 </template>
 
