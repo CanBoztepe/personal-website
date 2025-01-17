@@ -2,13 +2,15 @@
 
 My portfolio website, made with [Vue3].
 
-live demo: [canboztepe.netlify.app]
+Live domain: [canboztepe.com]
+Fallback domain: [canboztepe.netlify.app]
 
 Design inspired by [brittanychiang.com]
 
 [brittanychiang.com]: https://brittanychiang.com
 [Vue3]: https://vuejs.org/
 [canboztepe.netlify.app]: https://canboztepe.netlify.app/
+[canboztepe.com]: https://canboztepe.com/
 
 ## Tools & Plugins
 
