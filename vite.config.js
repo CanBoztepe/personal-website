@@ -28,15 +28,15 @@ export default defineConfig({
       autoInstall: true, // Automatically install icon packages when used
     }),
   ],
-  // server: {
-  //   proxy: {
-  //     '/api': {
-  //       target: 'https://zenquotes.io',
-  //       changeOrigin: true,
-  //       rewrite: (path) => path.replace(/^\/api/, ''),
-  //     },
-  //   },
-  // },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://zenquotes.io',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

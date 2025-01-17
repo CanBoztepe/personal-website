@@ -73,8 +73,8 @@ async function getRandomQuote() {
   try {
     const response = await axios.get(
       // 'https://cors-anywhere.herokuapp.com/https://zenquotes.io/api/random',
-      'https://zenquotes.io/api/random',
-      // '/api/api/random',
+      // 'https://zenquotes.io/api/random',
+      '/api/api/random',
     )
     const quoteData = response.data[0]
     // Update refs with new quote
