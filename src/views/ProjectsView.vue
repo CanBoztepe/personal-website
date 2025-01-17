@@ -79,7 +79,8 @@ function handleProjectsNavEmit(obj) {
 }
 
 .project-demo {
-  height: 60vh;
+  height: 70vh;
+  max-height: 750px;
   width: 100%;
   overflow: hidden;
 }
@@ -110,7 +111,7 @@ function handleProjectsNavEmit(obj) {
   }
 
   .project-demo {
-    height: 70vh;
+    /* height: 70vh; */
   }
 }
 
