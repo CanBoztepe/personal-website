@@ -32,7 +32,7 @@ const experiences = [
   },
 ]
 
-console.log(experiences[0].descriptions)
+// console.log(experiences[0].descriptions)
 </script>
 
 <template>
