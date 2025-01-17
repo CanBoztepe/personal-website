@@ -188,49 +188,59 @@ function operatorInput(operator) {
 
   // Input is "-"
   if (formulaOperator === '-') {
-    const operators = ['·', '÷', '-', '+']
-    // append "-" if the last char of formula is a number
-    if (!isNaN(formulaDisplay.value.charAt(formulaDisplay.value.length - 1))) {
-      mainDisplay.value = operator
-      formulaDisplay.value += formulaOperator
-
-      // DO nothing if the last 2 chars of formula is "--" || "+-" || "·-" || "÷-"
-    } else if (
-      formulaDisplay.value.endsWith('+-') ||
-      formulaDisplay.value.endsWith('·-') ||
-      formulaDisplay.value.endsWith('÷-') ||
-      formulaDisplay.value.endsWith('--')
-    ) {
-      console.log('did nothing')
-
-      // append "-" if the last char is an operator and not "--"
-    } else if (
-      operators.includes(formulaDisplay.value.charAt(formulaDisplay.value.length - 1)) &&
-      formulaDisplay.value.slice(-2) !== '--'
-    ) {
-      mainDisplay.value = operator
-      formulaDisplay.value += formulaOperator
-    }
+    isMinusOperator(operator, formulaOperator)
   } else {
-    // append the operator if the last char of formula is a number
-    if (!isNaN(formulaDisplay.value.charAt(formulaDisplay.value.length - 1))) {
-      mainDisplay.value = operator
-      formulaDisplay.value += formulaOperator
+    isNotMinusOperator(operator, formulaOperator)
+  }
+}
 
-      // if the last 2 chars is "+-" || "·-" || "÷-" || "--", replace it
-    } else if (
-      formulaDisplay.value.endsWith('+-') ||
-      formulaDisplay.value.endsWith('·-') ||
-      formulaDisplay.value.endsWith('÷-') ||
-      formulaDisplay.value.endsWith('--')
-    ) {
-      mainDisplay.value = operator
-      formulaDisplay.value = formulaDisplay.value.slice(0, -2) + formulaOperator
-    } else {
-      // else replace the operator
-      mainDisplay.value = operator
-      formulaDisplay.value = formulaDisplay.value.slice(0, -1) + formulaOperator
-    }
+// operator is "-", used in operatorInput(operator)
+function isMinusOperator(operator, formulaOperator) {
+  const operators = ['·', '÷', '-', '+']
+  // append "-" if the last char of formula is a number
+  if (!isNaN(formulaDisplay.value.charAt(formulaDisplay.value.length - 1))) {
+    mainDisplay.value = operator
+    formulaDisplay.value += formulaOperator
+
+    // DO nothing if the last 2 chars of formula is "--" || "+-" || "·-" || "÷-"
+  } else if (
+    formulaDisplay.value.endsWith('+-') ||
+    formulaDisplay.value.endsWith('·-') ||
+    formulaDisplay.value.endsWith('÷-') ||
+    formulaDisplay.value.endsWith('--')
+  ) {
+    console.log('did nothing')
+
+    // append "-" if the last char is an operator and not "--"
+  } else if (
+    operators.includes(formulaDisplay.value.charAt(formulaDisplay.value.length - 1)) &&
+    formulaDisplay.value.slice(-2) !== '--'
+  ) {
+    mainDisplay.value = operator
+    formulaDisplay.value += formulaOperator
+  }
+}
+
+// operator is NOT "-", used in operatorInput(operator)
+function isNotMinusOperator(operator, formulaOperator) {
+  // append the operator if the last char of formula is a number
+  if (!isNaN(formulaDisplay.value.charAt(formulaDisplay.value.length - 1))) {
+    mainDisplay.value = operator
+    formulaDisplay.value += formulaOperator
+
+    // if the last 2 chars is "+-" || "·-" || "÷-" || "--", replace it
+  } else if (
+    formulaDisplay.value.endsWith('+-') ||
+    formulaDisplay.value.endsWith('·-') ||
+    formulaDisplay.value.endsWith('÷-') ||
+    formulaDisplay.value.endsWith('--')
+  ) {
+    mainDisplay.value = operator
+    formulaDisplay.value = formulaDisplay.value.slice(0, -2) + formulaOperator
+  } else {
+    // else replace the operator
+    mainDisplay.value = operator
+    formulaDisplay.value = formulaDisplay.value.slice(0, -1) + formulaOperator
   }
 }
 
