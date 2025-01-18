@@ -57,9 +57,9 @@ import { ref, computed, onMounted } from 'vue'
 import axios from 'axios'
 
 // Configure Axios
-const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
-})
+// const axiosInstance = axios.create({
+//   baseURL: import.meta.env.VITE_API_BASE_URL,
+// })
 
 // console.log(import.meta.env.VITE_API_BASE_URL)
 
@@ -78,14 +78,19 @@ const tweetLink = computed(() => {
 async function getRandomQuote() {
   isLoading.value = true
   try {
-    const response = await axiosInstance.get('/api/random')
+    const response = await axios.get('/.netlify/functions/fetchQuotes')
+
+    // const response = await axiosInstance.get('/api/random')
 
     // const response = await axios.get(
     // 'https://cors-anywhere.herokuapp.com/https://zenquotes.io/api/random',
     // 'https://zenquotes.io/api/random',
     //   '/api/api/random',
     // )
-    const quoteData = response.data[0]
+
+    const quoteData = response.data
+    // const quoteData = response.data[0]
+
     // Update refs with new quote
     quote.value = ' ' + quoteData.q
     author.value = '- ' + quoteData.a
