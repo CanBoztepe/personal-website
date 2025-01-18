@@ -65,7 +65,7 @@ defineProps({
       </div>
 
       <div v-else class="job-description-wrapper">
-        <ul>
+        <ul class="job-description-list">
           <li
             class="job-description-item"
             v-for="(description, index) in descriptions"
@@ -119,6 +119,10 @@ defineProps({
 /* margin-top: 0.8rem; */
 /* font-size: 0.9rem; */
 /* } */
+
+.job-description-list {
+  margin-left: -27px;
+}
 
 .job-description-item {
   margin-bottom: 0.3rem;
