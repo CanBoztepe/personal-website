@@ -369,7 +369,8 @@ function resultCleaner() {
   white-space: normal;
   overflow-wrap: break-word;
   word-break: break-all;
-  margin: 5px;
+  padding: 0 5px;
+  margin-bottom: -5px;
 }
 
 .output-text {
@@ -381,7 +382,8 @@ function resultCleaner() {
   text-align: right;
   line-height: 70%;
   overflow: hidden;
-  margin: 5px;
+  /* margin: 5px !important; */
+  padding: 10px 5px;
 }
 
 /* Buttons Section */
