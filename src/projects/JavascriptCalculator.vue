@@ -140,7 +140,7 @@ function equalsInput() {
     // need to implement iframe with eval()?
     // evaluate() from math.js
     const evalResult = evaluate(correctedFormula)
-    const formattedResult = numberFormatter.format(evalResult)
+    const formattedResult = numberFormatter.format(evalResult).replace(/,/g, '')
 
     // Digit limit for displaying result
     if (formattedResult.toString().length >= 15) {
