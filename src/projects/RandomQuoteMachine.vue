@@ -78,7 +78,7 @@ const tweetLink = computed(() => {
 async function getRandomQuote() {
   isLoading.value = true
   try {
-    const response = await axios.get('/netlify/functions/fetchQuotes')
+    const response = await axios.get('/.netlify/functions/fetchQuotes')
 
     // const response = await axiosInstance.get('/api/random')
 
