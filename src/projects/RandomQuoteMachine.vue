@@ -88,7 +88,7 @@ async function getRandomQuote() {
     //   '/api/api/random',
     // )
 
-    console.log(response.data)
+    // console.log(response.data)
     // const quoteData = response.data
     const quoteData = response.data[0]
 
