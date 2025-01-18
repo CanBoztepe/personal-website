@@ -88,8 +88,9 @@ async function getRandomQuote() {
     //   '/api/api/random',
     // )
 
-    const quoteData = response.data
-    // const quoteData = response.data[0]
+    console.log(response.data)
+    // const quoteData = response.data
+    const quoteData = response.data[0]
 
     // Update refs with new quote
     quote.value = ' ' + quoteData.q
