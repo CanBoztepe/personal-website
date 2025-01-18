@@ -56,6 +56,13 @@
 import { ref, computed, onMounted } from 'vue'
 import axios from 'axios'
 
+// Configure Axios
+const axiosInstance = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL,
+})
+
+// console.log(import.meta.env.VITE_API_BASE_URL)
+
 // Reactive variables
 const quote = ref('')
 const author = ref('')
@@ -71,11 +78,13 @@ const tweetLink = computed(() => {
 async function getRandomQuote() {
   isLoading.value = true
   try {
-    const response = await axios.get(
-      // 'https://cors-anywhere.herokuapp.com/https://zenquotes.io/api/random',
-      // 'https://zenquotes.io/api/random',
-      '/api/api/random',
-    )
+    const response = await axiosInstance.get('/api/random')
+
+    // const response = await axios.get(
+    // 'https://cors-anywhere.herokuapp.com/https://zenquotes.io/api/random',
+    // 'https://zenquotes.io/api/random',
+    //   '/api/api/random',
+    // )
     const quoteData = response.data[0]
     // Update refs with new quote
     quote.value = ' ' + quoteData.q
