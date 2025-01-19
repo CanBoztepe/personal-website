@@ -20,8 +20,7 @@
     and always eager to learn new frameworks, tools, and languages. <br /><br />
     Outside of coding, I enjoy going for walks, hitting the gym, and making gaming videos—activities
     that help me stay balanced, curious, and solution-oriented. I look forward to contributing my
-    adaptability, teamwork, and passion for continuous growth to a forward-thinking development team
-    and grow as a programmer.
+    adaptability, teamwork, and passion for continuous growth to a forward-thinking development.
   </p>
 </template>
 
