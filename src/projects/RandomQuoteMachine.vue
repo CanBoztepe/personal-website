@@ -34,7 +34,7 @@
           title="Share this quote on X!"
         >
           <!-- <i class="fa-brands fa-x-twitter fa-2x"></i> -->
-          <IconMditwitter class="twitter-icon"></IconMditwitter>
+          <IconPrimeTwitter class="twitter-icon"></IconPrimeTwitter>
         </a>
 
         <!-- New Quote Button -->
