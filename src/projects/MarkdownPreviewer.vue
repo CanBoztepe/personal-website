@@ -129,6 +129,7 @@ const previewText = computed(() => {
   flex-direction: column;
   font-family: 'Rubik', sans-serif;
   overflow: hidden;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 /* Navbar */
