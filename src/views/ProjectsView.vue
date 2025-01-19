@@ -34,7 +34,7 @@ function handleProjectsNavEmit(obj) {
         <RouterView name="overlay" />
       </main>
 
-      <footer class="projects-footer">
+      <footer>
         <ProjectButtons
           :githubLink="buttonLinks.githubLink"
           :codepenLink="buttonLinks.codepenLink"
@@ -45,10 +45,6 @@ function handleProjectsNavEmit(obj) {
 </template>
 
 <style scoped>
-.projects-footer {
-  border-top: 1px solid var(--color-text-dark);
-}
-
 .projects-overlay {
   position: fixed;
   top: 0;
