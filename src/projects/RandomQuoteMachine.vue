@@ -49,6 +49,11 @@
         </button>
       </div>
     </main>
+
+    <footer class="app-footer">
+      Inspirational quotes provided by
+      <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a>
+    </footer>
   </div>
 </template>
 
@@ -136,6 +141,7 @@ body {
 }
 
 .random-quote-app {
+  position: relative;
   height: 100%;
   width: 100%;
   display: flex;
@@ -146,8 +152,14 @@ body {
   background: linear-gradient(85deg, rgba(255, 164, 124, 1) 0%, rgba(255, 202, 144, 1) 42%);
 }
 
+.app-footer {
+  position: absolute;
+  bottom: 0;
+  padding: 2px 5px;
+}
+
 /* navbar */
-.navbar {
+/* .navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -157,13 +169,13 @@ body {
   justify-content: space-between;
   align-content: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+} */
 
-.navbar-title {
+/* .navbar-title {
   margin-left: 52px;
   display: flex;
   align-items: center;
-}
+} */
 
 .geist-mono-title {
   font-family: 'Geist Mono', monospace;
