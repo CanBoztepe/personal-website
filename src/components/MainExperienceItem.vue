@@ -121,7 +121,7 @@ defineProps({
 /* } */
 
 .job-description-list {
-  margin-left: -27px;
+  margin-left: -20px;
 }
 
 .job-description-item {
