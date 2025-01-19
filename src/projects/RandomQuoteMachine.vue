@@ -10,7 +10,8 @@
       <Transition mode="out-in">
         <div id="quote-text" :key="quote">
           <span id="text">
-            <i class="fa fa-quote-left"></i>
+            <IconFaQuoteLeft class="quote-icon"></IconFaQuoteLeft>
+            <!-- <i class="fa fa-quote-left"></i> -->
             {{ quote }}
           </span>
         </div>
