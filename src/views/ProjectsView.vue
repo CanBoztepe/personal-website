@@ -106,9 +106,9 @@ function handleProjectsNavEmit(obj) {
     width: 95vw;
   }
 
-  /* .project-demo {
-    height: 70vh;
-  } */
+  .project-demo {
+    height: 75vh;
+  }
 }
 
 @media only screen and (max-width: 500px) {
