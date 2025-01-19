@@ -8,13 +8,13 @@ import HeaderContactIcon from './HeaderContactIcon.vue'
       <IconMdiGithub />
     </HeaderContactIcon>
 
-    <HeaderContactIcon href="https://codepen.io/CanBoztepe">
-      <IconMdiCodepen />
-    </HeaderContactIcon>
-
     <HeaderContactIcon href="https://www.linkedin.com/in/can-boztepe/"
       ><IconMdiLinkedin
     /></HeaderContactIcon>
+
+    <HeaderContactIcon href="https://codepen.io/CanBoztepe">
+      <IconMdiCodepen />
+    </HeaderContactIcon>
   </div>
 </template>
 
