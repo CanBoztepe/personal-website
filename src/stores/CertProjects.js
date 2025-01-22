@@ -56,6 +56,15 @@ export let useCertProjectsStore = defineStore('certProjects', {
           codepenLink: 'https://codepen.io/CanBoztepe/pen/vYoMBme',
         },
       },
+
+      activeLinks: {},
     }
+  },
+
+  // methods
+  actions: {
+    setActiveLinks(obj) {
+      this.activeLinks = obj
+    },
   },
 })
