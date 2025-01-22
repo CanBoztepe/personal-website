@@ -9,8 +9,8 @@ export let useCertProjectsStore = defineStore('certProjects', {
   // data
   state() {
     return {
-      projects: [
-        {
+      projects: {
+        JavascriptCalculator: {
           id: 1,
           name: 'JavaScript Calculator',
           imgSrc: JavaScriptCalculatorImg,
@@ -19,7 +19,7 @@ export let useCertProjectsStore = defineStore('certProjects', {
             'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/JavascriptCalculator.vue',
           codepenLink: 'https://codepen.io/CanBoztepe/pen/KwPMGBx',
         },
-        {
+        drumMachine: {
           id: 2,
           name: 'Drum Machine',
           imgSrc: DrumMachineImg,
@@ -28,7 +28,7 @@ export let useCertProjectsStore = defineStore('certProjects', {
             'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/DrumMachine.vue',
           codepenLink: 'https://codepen.io/CanBoztepe/pen/jENEQvZ',
         },
-        {
+        markdownPreviewer: {
           id: 3,
           name: 'Markdown Previewer',
           imgSrc: MarkdownPreviewerImg,
@@ -37,7 +37,7 @@ export let useCertProjectsStore = defineStore('certProjects', {
             'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/MarkdownPreviewer.vue',
           codepenLink: 'https://codepen.io/CanBoztepe/pen/YzmoVQq',
         },
-        {
+        pomodoroTimer: {
           id: 4,
           name: 'Pomodoro Timer',
           imgSrc: PomodoroTimerImg,
@@ -46,7 +46,7 @@ export let useCertProjectsStore = defineStore('certProjects', {
             'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/PomodoroTimer.vue',
           codepenLink: 'https://codepen.io/CanBoztepe/pen/mybRYvd',
         },
-        {
+        RandomQuoteMachine: {
           id: 5,
           name: 'Random Quote Machine',
           imgSrc: RandomQuoteMachineImg,
@@ -55,7 +55,7 @@ export let useCertProjectsStore = defineStore('certProjects', {
             'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/RandomQuoteMachine.vue',
           codepenLink: 'https://codepen.io/CanBoztepe/pen/vYoMBme',
         },
-      ],
+      },
     }
   },
 })
