@@ -16,6 +16,7 @@ Design inspired by [brittanychiang.com]
 
 - [Vite]
 - [Vue-Router]
+- [Pinia]
 - [unplugin vue components]
 - [unplugin icons]
 - [Mathjs]
@@ -25,6 +26,7 @@ Design inspired by [brittanychiang.com]
 
 [Vite]: https://vite.dev/
 [Vue-Router]: https://router.vuejs.org/
+[Pinia]: https://pinia.vuejs.org/
 [unplugin icons]: https://github.com/unplugin/unplugin-icons
 [unplugin vue components]: https://github.com/unplugin/unplugin-vue-components
 [Axios]: https://axios-http.com/docs/intro
