@@ -1,12 +1,15 @@
 <script setup>
 import MainSkillsItem from './MainSkillsItem.vue'
+import { usePersonalInfoStore } from '../stores/PersonalInfo'
 
-const skills = ['VueJS', 'JavaScript', 'HTML', 'CSS', 'Git', 'TypeScript']
+let personalInfo = usePersonalInfoStore()
 </script>
 
 <template>
   <div class="skills-wrapper">
-    <MainSkillsItem v-for="(skill, index) in skills" :key="index">{{ skill }}</MainSkillsItem>
+    <MainSkillsItem v-for="(skill, index) in personalInfo.skills" :key="index">{{
+      skill
+    }}</MainSkillsItem>
   </div>
 </template>
 

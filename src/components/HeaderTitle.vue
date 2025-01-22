@@ -1,7 +1,13 @@
+<script setup>
+import { usePersonalInfoStore } from '../stores/PersonalInfo'
+
+let personalInfo = usePersonalInfoStore()
+</script>
+
 <template>
   <div>
     <h1 class="header-name">CAN BOZTEPE</h1>
-    <h2 class="header-title">Jr. Frontend Developer</h2>
+    <h2 class="header-title">{{ personalInfo.title }}</h2>
   </div>
 </template>
 

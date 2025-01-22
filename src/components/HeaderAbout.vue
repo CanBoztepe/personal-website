@@ -1,7 +1,11 @@
+<script setup>
+import { usePersonalInfoStore } from '../stores/PersonalInfo'
+
+let personalInfo = usePersonalInfoStore()
+</script>
+
 <template>
-  <p class="header-text">
-    I'm a self-taught developer who strives to write readable, maintainable and scalable code.
-  </p>
+  <p class="header-text">{{ personalInfo.slogan }}</p>
 </template>
 
 <style scoped>
