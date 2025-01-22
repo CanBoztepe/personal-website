@@ -1,21 +1,12 @@
 <script setup>
 import ProjectsCloseButton from '@/components/ProjectsCloseButton.vue'
 import ProjectsDropdownNav from '@/components/ProjectsDropdownNav.vue'
-import { defineEmits } from 'vue'
-
-// switch to pinia
-const emit = defineEmits(['projectLinks'])
-
-// Emit project links to ProjectsView.vue
-function handleChildEmit(projectLinks) {
-  emit('projectLinks', projectLinks)
-}
 </script>
 
 <template>
   <header class="projects-header">
     <nav class="projects-nav">
-      <ProjectsDropdownNav @projectLinks="handleChildEmit" />
+      <ProjectsDropdownNav />
 
       <ProjectsCloseButton />
     </nav>

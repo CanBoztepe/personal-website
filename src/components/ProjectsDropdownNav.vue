@@ -1,82 +1,51 @@
 <script setup>
-import { ref, defineEmits, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useCertProjectsStore } from '../stores/CertProjects'
 
-let certProjectLinks = useCertProjectsStore()
-
-const emit = defineEmits(['projectLinks'])
-
-// switch to pinia later
-// const certProjectLinks = {
-//   JavascriptCalculator: {
-//     githubLink:
-//       'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/JavascriptCalculator.vue',
-//     codepenLink: 'https://codepen.io/CanBoztepe/pen/KwPMGBx',
-//   },
-//   drumMachine: {
-//     githubLink:
-//       'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/DrumMachine.vue',
-//     codepenLink: 'https://codepen.io/CanBoztepe/pen/jENEQvZ',
-//   },
-//   markdownPreviewer: {
-//     githubLink:
-//       'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/MarkdownPreviewer.vue',
-//     codepenLink: 'https://codepen.io/CanBoztepe/pen/YzmoVQq',
-//   },
-//   pomodoroTimer: {
-//     githubLink:
-//       'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/PomodoroTimer.vue',
-//     codepenLink: 'https://codepen.io/CanBoztepe/pen/mybRYvd',
-//   },
-//   RandomQuoteMachine: {
-//     githubLink:
-//       'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/RandomQuoteMachine.vue',
-//     codepenLink: 'https://codepen.io/CanBoztepe/pen/vYoMBme',
-//   },
-// }
+let CertProjectsStore = useCertProjectsStore()
 
 // Access the router instance
 const router = useRouter()
 
-// console.log(router.currentRoute.value.path)
+// take the initial link based on the current router path
 const selectedRoute = ref(router.currentRoute.value.path)
 
 onMounted(() => {
-  emitLinks()
+  setActiveProject()
 })
 
 // HandleDropdownInput
 function handleChange() {
-  emitLinks()
+  setActiveProject()
 
   navigate()
 }
 
 // Emit project links to ProjectsNav.vue
-function emitLinks() {
+function setActiveProject() {
   switch (selectedRoute.value) {
     case '/projects/javascript-calculator':
-      emit('projectLinks', certProjectLinks.projects.JavascriptCalculator)
+      CertProjectsStore.setActiveProject(CertProjectsStore.projects.JavascriptCalculator)
       // console.log(`emitted: ${certProjectLinks.JavascriptCalculator}`)
       break
     case '/projects/drum-machine':
-      emit('projectLinks', certProjectLinks.projects.drumMachine)
+      CertProjectsStore.setActiveProject(CertProjectsStore.projects.drumMachine)
       // console.log(`emitted: ${certProjectLinks.drumMachine}`)
       break
     case '/projects/markdown-previewer':
-      emit('projectLinks', certProjectLinks.projects.markdownPreviewer)
+      CertProjectsStore.setActiveProject(CertProjectsStore.projects.markdownPreviewer)
       // console.log(`emitted: ${certProjectLinks.markdownPreviewer}`)
       break
     case '/projects/pomodoro-timer':
-      emit('projectLinks', certProjectLinks.projects.pomodoroTimer)
+      CertProjectsStore.setActiveProject(CertProjectsStore.projects.pomodoroTimer)
       // console.log(`emitted: ${certProjectLinks.pomodoroTimer}`)
       break
     case '/projects/random-quote-machine':
-      emit('projectLinks', certProjectLinks.projects.RandomQuoteMachine)
+      CertProjectsStore.setActiveProject(CertProjectsStore.projects.RandomQuoteMachine)
       break
     default:
-      console.log(`Sorry, no bueno`)
+      console.error(`Sorry, router link not found`)
       break
   }
 }

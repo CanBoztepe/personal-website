@@ -6,7 +6,7 @@ import PomodoroTimerImg from '@/assets/images/pomodoro-timer-image.png'
 import RandomQuoteMachineImg from '@/assets/images/random-quote-machine-image.png'
 
 export let useCertProjectsStore = defineStore('certProjects', {
-  // data
+  // state
   state() {
     return {
       projects: {
@@ -57,14 +57,21 @@ export let useCertProjectsStore = defineStore('certProjects', {
         },
       },
 
-      activeLinks: {},
+      activeProject: {},
     }
   },
 
-  // methods
+  // actions
   actions: {
-    setActiveLinks(obj) {
-      this.activeLinks = obj
+    setActiveProject(obj) {
+      this.activeProject = obj
+    },
+  },
+
+  // getters
+  getters: {
+    getActiveProject(state) {
+      return state.activeProject
     },
   },
 })
