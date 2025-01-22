@@ -2,14 +2,6 @@
 import ProjectsNav from '@/components/ProjectsNav.vue'
 import ProjectButtons from '@/components/ProjectButtons.vue'
 import { RouterView, useRouter } from 'vue-router'
-import { ref } from 'vue'
-
-// switch to pinia, the dropdown should mutate state
-// or maybe ProjectButtons.vue can handle its own links from state
-const buttonLinks = ref({
-  githubLink: '',
-  codepenLink: '',
-})
 
 // Get the router instance
 const router = useRouter()
@@ -17,17 +9,12 @@ const router = useRouter()
 function closeOverlay() {
   router.push({ name: 'home' })
 }
-
-function handleProjectsNavEmit(obj) {
-  // console.log(obj)
-  buttonLinks.value = obj
-}
 </script>
 
 <template>
   <section class="projects-overlay fade-in" @click.self="closeOverlay">
     <section class="projects-content">
-      <ProjectsNav @projectLinks="handleProjectsNavEmit" />
+      <ProjectsNav />
 
       <!-- Project Demo -->
       <main class="project-demo">
@@ -35,10 +22,7 @@ function handleProjectsNavEmit(obj) {
       </main>
 
       <footer>
-        <ProjectButtons
-          :githubLink="buttonLinks.githubLink"
-          :codepenLink="buttonLinks.codepenLink"
-        ></ProjectButtons>
+        <ProjectButtons />
       </footer>
     </section>
   </section>
