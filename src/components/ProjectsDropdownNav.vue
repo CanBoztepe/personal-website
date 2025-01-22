@@ -1,37 +1,40 @@
 <script setup>
 import { ref, defineEmits, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { useCertProjectsStore } from '../stores/CertProjects'
+
+let certProjectLinks = useCertProjectsStore()
 
 const emit = defineEmits(['projectLinks'])
 
 // switch to pinia later
-const certProjectLinks = {
-  JavascriptCalculator: {
-    githubLink:
-      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/JavascriptCalculator.vue',
-    codepenLink: 'https://codepen.io/CanBoztepe/pen/KwPMGBx',
-  },
-  drumMachine: {
-    githubLink:
-      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/DrumMachine.vue',
-    codepenLink: 'https://codepen.io/CanBoztepe/pen/jENEQvZ',
-  },
-  markdownPreviewer: {
-    githubLink:
-      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/MarkdownPreviewer.vue',
-    codepenLink: 'https://codepen.io/CanBoztepe/pen/YzmoVQq',
-  },
-  pomodoroTimer: {
-    githubLink:
-      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/PomodoroTimer.vue',
-    codepenLink: 'https://codepen.io/CanBoztepe/pen/mybRYvd',
-  },
-  RandomQuoteMachine: {
-    githubLink:
-      'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/RandomQuoteMachine.vue',
-    codepenLink: 'https://codepen.io/CanBoztepe/pen/vYoMBme',
-  },
-}
+// const certProjectLinks = {
+//   JavascriptCalculator: {
+//     githubLink:
+//       'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/JavascriptCalculator.vue',
+//     codepenLink: 'https://codepen.io/CanBoztepe/pen/KwPMGBx',
+//   },
+//   drumMachine: {
+//     githubLink:
+//       'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/DrumMachine.vue',
+//     codepenLink: 'https://codepen.io/CanBoztepe/pen/jENEQvZ',
+//   },
+//   markdownPreviewer: {
+//     githubLink:
+//       'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/MarkdownPreviewer.vue',
+//     codepenLink: 'https://codepen.io/CanBoztepe/pen/YzmoVQq',
+//   },
+//   pomodoroTimer: {
+//     githubLink:
+//       'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/PomodoroTimer.vue',
+//     codepenLink: 'https://codepen.io/CanBoztepe/pen/mybRYvd',
+//   },
+//   RandomQuoteMachine: {
+//     githubLink:
+//       'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/RandomQuoteMachine.vue',
+//     codepenLink: 'https://codepen.io/CanBoztepe/pen/vYoMBme',
+//   },
+// }
 
 // Access the router instance
 const router = useRouter()
@@ -54,23 +57,23 @@ function handleChange() {
 function emitLinks() {
   switch (selectedRoute.value) {
     case '/projects/javascript-calculator':
-      emit('projectLinks', certProjectLinks.JavascriptCalculator)
+      emit('projectLinks', certProjectLinks.projects.JavascriptCalculator)
       // console.log(`emitted: ${certProjectLinks.JavascriptCalculator}`)
       break
     case '/projects/drum-machine':
-      emit('projectLinks', certProjectLinks.drumMachine)
+      emit('projectLinks', certProjectLinks.projects.drumMachine)
       // console.log(`emitted: ${certProjectLinks.drumMachine}`)
       break
     case '/projects/markdown-previewer':
-      emit('projectLinks', certProjectLinks.markdownPreviewer)
+      emit('projectLinks', certProjectLinks.projects.markdownPreviewer)
       // console.log(`emitted: ${certProjectLinks.markdownPreviewer}`)
       break
     case '/projects/pomodoro-timer':
-      emit('projectLinks', certProjectLinks.pomodoroTimer)
+      emit('projectLinks', certProjectLinks.projects.pomodoroTimer)
       // console.log(`emitted: ${certProjectLinks.pomodoroTimer}`)
       break
     case '/projects/random-quote-machine':
-      emit('projectLinks', certProjectLinks.RandomQuoteMachine)
+      emit('projectLinks', certProjectLinks.projects.RandomQuoteMachine)
       break
     default:
       console.log(`Sorry, no bueno`)
