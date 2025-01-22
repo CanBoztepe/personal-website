@@ -1,24 +1,14 @@
 <script setup>
 import MainCoolProjectItem from '@/components/MainCoolProjectItem.vue'
-import PersonalWebsite from '@/assets/images/personal-website.png'
+import { useCoolProjectsStore } from '../stores/CoolProjects'
 
-// Certification Projects
-const coolProjects = [
-  {
-    id: 1,
-    name: 'canboztepe.com',
-    imgSrc: PersonalWebsite,
-    demoLink: '',
-    githubLink: 'https://github.com/CanBoztepe/personal-website',
-    codepenLink: '',
-  },
-]
+let coolProjects = useCoolProjectsStore()
 </script>
 
 <template>
   <div class="projects-list">
     <MainCoolProjectItem
-      v-for="project in coolProjects"
+      v-for="project in coolProjects.projects"
       :key="project.id"
       :name="project.name"
       :imgSrc="project.imgSrc"

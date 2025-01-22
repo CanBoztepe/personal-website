@@ -1,27 +1,20 @@
 <script setup>
-import { defineProps } from 'vue'
 import LinkItem from './LinkItem.vue'
+import { useCertProjectsStore } from '../stores/CertProjects'
 
-defineProps({
-  githubLink: {
-    type: String,
-    required: true,
-  },
-  codepenLink: {
-    type: String,
-    required: true,
-  },
-})
+let CertProjectsStore = useCertProjectsStore()
 </script>
 
 <template>
   <p class="buttons-p">
     View Source Code on
-    <LinkItem :href="githubLink" isResponsive isProjectLink isBold
+    <LinkItem :href="CertProjectsStore.activeProject.githubLink" isResponsive isProjectLink isBold
       >Github (Composition API)</LinkItem
     >
     or on
-    <LinkItem :href="codepenLink" isResponsive isProjectLink isBold>Codepen (Options API)</LinkItem>
+    <LinkItem :href="CertProjectsStore.activeProject.codepenLink" isResponsive isProjectLink isBold
+      >Codepen (Options API)</LinkItem
+    >
   </p>
 </template>
 
