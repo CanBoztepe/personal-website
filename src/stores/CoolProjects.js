@@ -10,6 +10,7 @@ export let useCoolProjectsStore = defineStore('coolProjects', {
           id: 1,
           name: 'canboztepe.com',
           imgSrc: PersonalWebsiteImg,
+          description: 'My portfolio site where I showcase Vue proficiency',
           demoLink: '',
           githubLink: 'https://github.com/CanBoztepe/personal-website',
           codepenLink: '',
