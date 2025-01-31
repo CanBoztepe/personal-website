@@ -19,6 +19,9 @@ const props = defineProps({
   codepenLink: {
     type: String,
   },
+  description: {
+    type: String,
+  },
 })
 
 const imgAlt = computed(() => {
@@ -35,16 +38,20 @@ const imgAlt = computed(() => {
       </div>
 
       <div class="project-main">
-        <!-- <LinkItem>{{ name }}</LinkItem> -->
+        <div class="project-title">
+          <!-- <LinkItem>{{ name }}</LinkItem> -->
 
-        <h3 class="project-name">{{ name }}</h3>
+          <h3 class="project-name">{{ name }}</h3>
 
-        <IconMdiArrowTopRight class="arrow-icon" />
-        <!-- <MainProjectButtons
+          <IconMdiArrowTopRight class="arrow-icon" />
+          <!-- <MainProjectButtons
           :demoLink="demoLink"
           :githubLink="githubLink"
           :codepenLink="codepenLink"
         ></MainProjectButtons> -->
+        </div>
+
+        <p class="project-desc">{{ description }}</p>
       </div>
     </article>
   </a>
@@ -90,6 +97,10 @@ const imgAlt = computed(() => {
   transition: border-color 0.3s ease;
 }
 
+.project-name {
+  color: var(--color-primary);
+}
+
 .router-item:hover .project-img,
 .router-item:hover .project-name,
 .router-item:hover .arrow-icon,
@@ -102,11 +113,22 @@ const imgAlt = computed(() => {
 
 .project-main {
   height: 100%;
-  display: flex;
+  /* display: flex; */
   /* flex-direction: column; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* gap: 1rem; */
   flex: 2;
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  /* color: var(--color-text-light); */
+}
+
+.project-desc {
+  font-size: 0.9rem;
 }
 
 .project-name {
