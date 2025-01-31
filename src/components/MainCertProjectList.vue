@@ -1,5 +1,5 @@
 <script setup>
-import MainProjectItem from '@/components/MainProjectItem.vue'
+import MainCertProjectItem from '@/components/MainCertProjectItem.vue'
 import { useCertProjectsStore } from '../stores/CertProjects'
 
 let certProjects = useCertProjectsStore()
@@ -7,7 +7,7 @@ let certProjects = useCertProjectsStore()
 
 <template>
   <div class="projects-list">
-    <MainProjectItem
+    <MainCertProjectItem
       v-for="project in certProjects.projects"
       :key="project.id"
       :name="project.name"

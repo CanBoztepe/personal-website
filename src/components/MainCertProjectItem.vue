@@ -39,7 +39,11 @@ const imgAlt = computed(() => {
 
         <h3 class="project-name">{{ name }}</h3>
 
-        <IconMdiArrowTopRight class="arrow-icon" />
+        <p class="project-text-pc">Click for demo!</p>
+        <p class="project-text-mobile">Tap for demo!</p>
+
+        <!-- <IconMdiArrowTopRight class="arrow-icon" /> -->
+
         <!-- <MainProjectButtons
           :demoLink="demoLink"
           :githubLink="githubLink"
@@ -103,9 +107,9 @@ const imgAlt = computed(() => {
 .project-main {
   height: 100%;
   display: flex;
-  /* flex-direction: column; */
-  justify-content: space-between;
-  /* gap: 1rem; */
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 1rem;
   flex: 2;
 }
 
@@ -114,7 +118,19 @@ const imgAlt = computed(() => {
   line-height: 1;
 }
 
-.arrow-icon {
+.project-text-mobile,
+.project-text-pc {
+  color: var(--color-primary);
+}
+
+.project-text-mobile {
+  display: none;
+}
+
+/* .project-text-pc {
+} */
+
+/* .arrow-icon {
   margin-left: 0.2rem;
   transform: translate(-4px, 4px);
   transition: transform 0.3s ease;
@@ -123,16 +139,27 @@ const imgAlt = computed(() => {
 .router-item:hover .arrow-icon,
 .router-item:focus .arrow-icon {
   transform: translate(0px, 0px);
-}
+} */
 
 /* Responsive */
 @media only screen and (max-width: 1024px) {
 }
 @media only screen and (max-width: 768px) {
+  .project-text-pc {
+    display: none;
+  }
+
+  .project-text-mobile {
+    display: block;
+  }
 }
 @media only screen and (max-width: 500px) {
   .router-item {
     max-width: 95vw;
+  }
+
+  .project-main {
+    gap: 0.3rem;
   }
 
   .project-item {
