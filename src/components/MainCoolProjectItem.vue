@@ -116,13 +116,13 @@ const imgAlt = computed(() => {
 
 .arrow-icon {
   margin-left: 0.2rem;
-  transform: translate(-4px, 4px);
+  transform: translate(0px, 0px);
   transition: transform 0.3s ease;
 }
 
 .router-item:hover .arrow-icon,
 .router-item:focus .arrow-icon {
-  transform: translate(0px, 0px);
+  transform: translate(4px, -4px);
 }
 
 /* Responsive */
