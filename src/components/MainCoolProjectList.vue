@@ -12,6 +12,7 @@ let coolProjects = useCoolProjectsStore()
       :key="project.id"
       :name="project.name"
       :imgSrc="project.imgSrc"
+      :description="project.description"
       :demoLink="project.demoLink"
       :githubLink="project.githubLink"
       :codepenLink="project.codepenLink"
