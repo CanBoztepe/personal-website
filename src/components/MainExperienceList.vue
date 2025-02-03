@@ -17,7 +17,8 @@ let workExp = useWorkExpStore()
       :endDate="experience.endDate"
       :displayStartDate="experience.displayStartDate"
       :displayEndDate="experience.displayEndDate"
-      :descriptions="experience.descriptions"
+      :description="experience.description"
+      :points="experience.points"
     />
   </div>
 </template>
