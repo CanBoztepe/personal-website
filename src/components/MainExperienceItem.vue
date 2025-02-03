@@ -30,7 +30,11 @@ defineProps({
     type: String,
     required: true,
   },
-  descriptions: {
+  description: {
+    type: String,
+    required: true,
+  },
+  points: {
     type: Array,
     required: true,
   },
@@ -58,20 +62,14 @@ defineProps({
         <p>{{ location }}</p>
       </div>
 
-      <div v-if="descriptions.length <= 1" class="job-description-wrapper">
+      <div class="job-description-wrapper">
         <p class="job-description">
-          {{ descriptions[0] }}
+          {{ description }}
         </p>
-      </div>
 
-      <div v-else class="job-description-wrapper">
-        <ul class="job-description-list">
-          <li
-            class="job-description-item"
-            v-for="(description, index) in descriptions"
-            :key="index"
-          >
-            {{ description }}
+        <ul v-if="points.length > 0" class="job-description-list">
+          <li class="job-description-item" v-for="(point, index) in points" :key="index">
+            {{ point }}
           </li>
         </ul>
       </div>
@@ -115,10 +113,9 @@ defineProps({
   margin-top: 0.8rem;
 }
 
-/* .job-description { */
-/* margin-top: 0.8rem; */
-/* font-size: 0.9rem; */
-/* } */
+.job-description {
+  margin-bottom: 0.8rem;
+}
 
 .job-description-list {
   margin-left: -20px;

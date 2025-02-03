@@ -21,7 +21,7 @@ import MainCertProjectList from '@/components/MainCertProjectList.vue'
     </MainSection>
 
     <MainSection>
-      <template #title>Experience</template>
+      <template #title>Relevant Experience</template>
       <template #default
         ><MainExperienceList />
 
