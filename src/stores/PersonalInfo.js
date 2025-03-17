@@ -4,7 +4,7 @@ export let usePersonalInfoStore = defineStore('personalInfo', {
   // data
   state() {
     return {
-      title: 'Frontend Developer',
+      title: 'Jr. Front-end Developer',
       slogan:
         "I'm a self-taught developer who strives to write readable, maintainable and scalable code.",
       skills: ['VueJS', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Git'],
