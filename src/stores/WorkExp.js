@@ -30,9 +30,10 @@ export let useWorkExpStore = defineStore('workExp', {
           description:
             'Contributed as part of a small developer team at a startup, working closely with a Senior Fullstack Developer.',
           points: [
-            'Developed production ready Vue components, ensuring cross-browser compatibility and mobile-friendly design.',
+            "Developed production ready Vue components according to the senior's specifications, ensuring cross-browser compatibility and mobile-friendly design.",
             'Developed interactive user interfaces using the Buefy component library.',
-            'Designed and developed the entire frontend of a travel management application using Vue.js, enabling employees to book, manage, and track travel requests seamlessly.',
+            'Implemented tools like vue-router, vuex & vue-i18n',
+            'Designed and developed the entire front-end of a travel management application using Vue.js, enabling employees to book, manage, and track travel requests seamlessly.',
           ],
         },
       ],
