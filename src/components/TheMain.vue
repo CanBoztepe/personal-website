@@ -26,7 +26,7 @@ import MainCertProjectList from '@/components/MainCertProjectList.vue'
         ><MainExperienceList />
 
         <div>
-          <LinkItem href="/resume.pdf" isBold isResponsive="">View Résumé</LinkItem>
+          <LinkItem href="/resume.pdf" isBold isResponsive="">View Full Résumé</LinkItem>
         </div>
       </template>
     </MainSection>
