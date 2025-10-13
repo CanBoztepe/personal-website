@@ -10,8 +10,17 @@ export let useCertProjectsStore = defineStore('certProjects', {
   state() {
     return {
       projects: {
-        JavascriptCalculator: {
+        RandomQuoteMachine: {
           id: 1,
+          name: 'Random Quote Machine',
+          imgSrc: RandomQuoteMachineImg,
+          demoLink: '/projects/random-quote-machine',
+          githubLink:
+            'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/RandomQuoteMachine.vue',
+          codepenLink: 'https://codepen.io/CanBoztepe/pen/vYoMBme',
+        },
+        JavascriptCalculator: {
+          id: 2,
           name: 'JavaScript Calculator',
           imgSrc: JavaScriptCalculatorImg,
           demoLink: '/projects/javascript-calculator',
@@ -20,7 +29,7 @@ export let useCertProjectsStore = defineStore('certProjects', {
           codepenLink: 'https://codepen.io/CanBoztepe/pen/KwPMGBx',
         },
         drumMachine: {
-          id: 2,
+          id: 3,
           name: 'Drum Machine',
           imgSrc: DrumMachineImg,
           demoLink: '/projects/drum-machine',
@@ -29,7 +38,7 @@ export let useCertProjectsStore = defineStore('certProjects', {
           codepenLink: 'https://codepen.io/CanBoztepe/pen/jENEQvZ',
         },
         markdownPreviewer: {
-          id: 3,
+          id: 4,
           name: 'Markdown Previewer',
           imgSrc: MarkdownPreviewerImg,
           demoLink: '/projects/markdown-previewer',
@@ -38,22 +47,13 @@ export let useCertProjectsStore = defineStore('certProjects', {
           codepenLink: 'https://codepen.io/CanBoztepe/pen/YzmoVQq',
         },
         pomodoroTimer: {
-          id: 4,
+          id: 5,
           name: 'Pomodoro Timer',
           imgSrc: PomodoroTimerImg,
           demoLink: '/projects/pomodoro-timer',
           githubLink:
             'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/PomodoroTimer.vue',
           codepenLink: 'https://codepen.io/CanBoztepe/pen/mybRYvd',
-        },
-        RandomQuoteMachine: {
-          id: 5,
-          name: 'Random Quote Machine',
-          imgSrc: RandomQuoteMachineImg,
-          demoLink: '/projects/random-quote-machine',
-          githubLink:
-            'https://github.com/CanBoztepe/personal-website/blob/main/src/projects/RandomQuoteMachine.vue',
-          codepenLink: 'https://codepen.io/CanBoztepe/pen/vYoMBme',
         },
       },
 
