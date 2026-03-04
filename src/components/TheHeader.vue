@@ -1,5 +1,5 @@
 <script setup>
-import LinkItem from '@/components/LinkItem.vue'
+// import LinkItem from '@/components/LinkItem.vue'
 import HeaderContactIcons from '@/components/HeaderContactIcons.vue'
 import HeaderTitle from '@/components/HeaderTitle.vue'
 import HeaderAbout from '@/components//HeaderAbout.vue'
