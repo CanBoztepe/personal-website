@@ -13,9 +13,9 @@ import HeaderAbout from '@/components//HeaderAbout.vue'
 
         <HeaderAbout />
 
-        <div class="github-link-wrapper">
+        <!-- <div class="github-link-wrapper">
           <LinkItem href="https://github.com/CanBoztepe" isButton isBold>My Github</LinkItem>
-        </div>
+        </div> -->
       </div>
 
       <HeaderContactIcons />
