@@ -15,19 +15,19 @@ export let useCertsStore = defineStore('certs', {
           id: 2,
           name: 'Front End Development Libraries',
           schoolName: 'freeCodeCamp',
-          link: 'https://www.freecodecamp.org/certification/CanBoztepe/front-end-development-libraries',
+          link: 'https://www.freecodecamp.org/certification/canboztepe/front-end-development-libraries',
         },
         {
           id: 3,
           name: 'JavaScript Algorithms and Data Structures',
           schoolName: 'freeCodeCamp',
-          link: 'https://www.freecodecamp.org/certification/CanBoztepe/javascript-algorithms-and-data-structures',
+          link: 'https://www.freecodecamp.org/certification/canboztepe/javascript-algorithms-and-data-structures',
         },
         {
           id: 4,
           name: 'Responsive Web Design',
           schoolName: 'freeCodeCamp',
-          link: 'https://www.freecodecamp.org/certification/CanBoztepe/responsive-web-design',
+          link: 'https://www.freecodecamp.org/certification/canboztepe/responsive-web-design',
         },
       ],
     }
