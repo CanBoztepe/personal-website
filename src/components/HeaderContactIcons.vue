@@ -17,9 +17,9 @@ let personalInfo = usePersonalInfoStore()
       <IconMdiCodepen />
     </HeaderContactIcon>
 
-    <HeaderContactIcon :href="personalInfo.links.leetcode">
+    <!-- <HeaderContactIcon :href="personalInfo.links.leetcode">
       <IconHugeiconsLeetcode />
-    </HeaderContactIcon>
+    </HeaderContactIcon> -->
   </div>
 </template>
 
