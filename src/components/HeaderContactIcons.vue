@@ -11,11 +11,11 @@ let personalInfo = usePersonalInfoStore()
       <IconMdiGithub />
     </HeaderContactIcon>
 
-    <HeaderContactIcon :href="personalInfo.links.linkedin"><IconMdiLinkedin /></HeaderContactIcon>
+    <!-- <HeaderContactIcon :href="personalInfo.links.linkedin"><IconMdiLinkedin /></HeaderContactIcon>
 
     <HeaderContactIcon :href="personalInfo.links.codepen">
       <IconMdiCodepen />
-    </HeaderContactIcon>
+    </HeaderContactIcon> -->
 
     <!-- <HeaderContactIcon :href="personalInfo.links.leetcode">
       <IconHugeiconsLeetcode />
